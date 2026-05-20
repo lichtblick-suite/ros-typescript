@@ -48,8 +48,9 @@ export class MessageReader<T = unknown> {
   #useRos1Time: boolean;
 
   /**
-   * True when the most recent decode finished before reaching the end of the buffer. CDR ignores
-   * trailing bytes by design, so this can signal a schema/payload version mismatch.
+   * True when the most recent decode finished before reaching the end of the buffer, excluding CDR
+   * final padding. CDR ignores trailing bytes by design, so this can signal a schema/payload
+   * version mismatch.
    */
   public lastReadHadTrailingBytes(): boolean {
     return this.#lastReadHadTrailingBytes;
@@ -85,7 +86,9 @@ export class MessageReader<T = unknown> {
     const reader = new CdrReader(buffer);
     const value = this.#readComplexType(this.#rootDefinition, reader) as R;
     this.#lastReadByteLength = reader.decodedBytes;
-    this.#lastReadHadTrailingBytes = this.#lastReadByteLength < buffer.byteLength;
+    this.#lastReadHadTrailingBytes =
+      this.#lastReadByteLength < buffer.byteLength &&
+      !isCdrFinalPadding(buffer, this.#lastReadByteLength);
     return value;
   }
 
@@ -155,6 +158,33 @@ export class MessageReader<T = unknown> {
 function isConstantModule(def: MessageDefinition): boolean {
   // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   return def.definitions.length > 0 && def.definitions.every((field) => field.isConstant);
+}
+
+function isCdrFinalPadding(buffer: ArrayBufferView, decodedBytes: number): boolean {
+  const trailingByteLength = buffer.byteLength - decodedBytes;
+  if (trailingByteLength <= 0) {
+    return false;
+  }
+
+  // The 4-byte branch is load-bearing: standard CDR1 final padding aligns the data section to a
+  // 4-byte boundary, and since the encapsulation header is itself 4 bytes, buffer-relative and
+  // data-relative alignment agree. The 8-byte branch is a buffer-relative best-effort for
+  // publishers that pad to a wider boundary.
+  const paddingToFourByteBoundary = (4 - (decodedBytes % 4)) % 4;
+  const paddingToEightByteBoundary = (8 - (decodedBytes % 8)) % 8;
+  if (
+    trailingByteLength !== paddingToFourByteBoundary &&
+    trailingByteLength !== paddingToEightByteBoundary
+  ) {
+    return false;
+  }
+
+  const trailingBytes = new Uint8Array(
+    buffer.buffer,
+    buffer.byteOffset + decodedBytes,
+    trailingByteLength,
+  );
+  return trailingBytes.every((byte) => byte === 0);
 }
 
 const deserializers = new Map<string, Deserializer>([
