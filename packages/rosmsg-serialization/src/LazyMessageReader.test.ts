@@ -1,3 +1,4 @@
+import type { MessageDefinition } from "@foxglove/message-definition";
 import { parse as parseMessageDefinition } from "@foxglove/rosmsg";
 import * as prettier from "prettier";
 
@@ -5,6 +6,30 @@ import { LazyMessageReader } from "./LazyMessageReader";
 import messageReaderTests from "./fixtures/messageReaderTests";
 
 describe("LazyReader", () => {
+  it("rejects invalid ROS field names before generating lazy readers", () => {
+    const globalWithMarker = globalThis as typeof globalThis & {
+      rosmsgSerializationLazyReaderInjected?: boolean;
+    };
+    delete globalWithMarker.rosmsgSerializationLazyReaderInjected;
+    const payloadName = "x; globalThis.rosmsgSerializationLazyReaderInjected = true; this.y";
+    const definitions: MessageDefinition[] = [
+      {
+        definitions: [
+          {
+            name: payloadName,
+            type: "string",
+            isArray: false,
+            isComplex: false,
+            isConstant: false,
+          },
+        ],
+      },
+    ];
+
+    expect(() => new LazyMessageReader(definitions)).toThrow(/valid ROS field name/);
+    expect(globalWithMarker.rosmsgSerializationLazyReaderInjected).toBeUndefined();
+  });
+
   it.each(messageReaderTests)(
     "should deserialize %s",
     async (msgDef: string, arr: Iterable<number>, expected: Record<string, unknown>) => {

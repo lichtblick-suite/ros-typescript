@@ -2,6 +2,7 @@ import { MessageDefinition, MessageDefinitionField } from "@foxglove/message-def
 
 import { createParsers, StandardTypeReader } from ".";
 import { deserializers, fixedSizeTypes, FixedSizeTypes } from "./BuiltinDeserialize";
+import { validateMessageDefinitionsForCodegen } from "./validateMessageDefinitions";
 
 const builtinSizes = {
   // strings are the only builtin type that are variable size
@@ -238,6 +239,8 @@ function getterFunction(field: MessageDefinitionField): string {
 export default function buildReader(
   definitions: readonly MessageDefinition[],
 ): SerializedMessageReader {
+  validateMessageDefinitionsForCodegen(definitions);
+
   const classes = new Array<string>();
   const rootClassName = "__RootMsg";
 

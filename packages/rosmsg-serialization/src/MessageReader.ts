@@ -10,6 +10,7 @@
 import { MessageDefinition } from "@foxglove/message-definition";
 
 import decodeString from "./decodeString";
+import { validateMessageDefinitionsForCodegen } from "./validateMessageDefinitions";
 
 type TypedArray =
   | Int8Array
@@ -232,6 +233,7 @@ export const createParsers = ({
   if (definitions.length === 0) {
     throw new Error(`no types given`);
   }
+  validateMessageDefinitionsForCodegen(definitions);
 
   const unnamedTypes = definitions.filter((type) => !type.name);
   if (unnamedTypes.length > 1) {

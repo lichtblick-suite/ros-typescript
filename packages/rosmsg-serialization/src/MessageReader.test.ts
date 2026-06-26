@@ -7,6 +7,7 @@
 //   found at http://www.apache.org/licenses/LICENSE-2.0
 //   You may not use this file except in compliance with the License.
 
+import type { MessageDefinition } from "@foxglove/message-definition";
 import { parse as parseMessageDefinition } from "@foxglove/rosmsg";
 
 import { MessageReader } from "./MessageReader";
@@ -20,6 +21,37 @@ const getStringBuffer = (str: string) => {
 };
 
 describe("MessageReader", () => {
+  it("rejects invalid ROS field names before generating readers", () => {
+    const globalWithMarker = globalThis as typeof globalThis & {
+      rosmsgSerializationReaderInjected?: boolean;
+    };
+    delete globalWithMarker.rosmsgSerializationReaderInjected;
+    const payloadName = "x; globalThis.rosmsgSerializationReaderInjected = true; this.y";
+    const definitions: MessageDefinition[] = [
+      {
+        name: "std_msgs/String",
+        definitions: [
+          {
+            name: payloadName,
+            type: "string",
+            isArray: false,
+            isComplex: false,
+            isConstant: false,
+          },
+        ],
+      },
+    ];
+
+    expect(() => new MessageReader(definitions)).toThrow(/valid ROS field name/);
+    expect(globalWithMarker.rosmsgSerializationReaderInjected).toBeUndefined();
+  });
+
+  it("allows reserved words as field names", () => {
+    const reader = new MessageReader(parseMessageDefinition("uint8 function"));
+
+    expect(reader.readMessage(Uint8Array.from([3]))).toEqual({ function: 3 });
+  });
+
   it.each(messageReaderTests)(
     "should deserialize %s",
     (msgDef: string, arr: Iterable<number>, expected: Record<string, unknown>) => {

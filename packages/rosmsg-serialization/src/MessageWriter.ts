@@ -10,6 +10,7 @@
 import { MessageDefinition, MessageDefinitionField } from "@foxglove/message-definition";
 
 import { stringLengthUtf8 } from "./stringLengthUtf8";
+import { validateMessageDefinitionsForCodegen } from "./validateMessageDefinitions";
 
 export interface Time {
   // whole seconds
@@ -233,6 +234,7 @@ function createWriterAndSizeCalculator(types: MessageDefinition[]): WriterAndSiz
   if (types.length === 0) {
     throw new Error(`no types given`);
   }
+  validateMessageDefinitionsForCodegen(types);
 
   const unnamedTypes = types.filter((type) => type.name == undefined);
   if (unnamedTypes.length > 1) {

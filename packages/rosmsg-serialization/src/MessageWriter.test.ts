@@ -7,6 +7,7 @@
 //   found at http://www.apache.org/licenses/LICENSE-2.0
 //   You may not use this file except in compliance with the License.
 
+import type { MessageDefinition } from "@foxglove/message-definition";
 import { parse as parseMessageDefinition } from "@foxglove/rosmsg";
 
 import { MessageReader } from "./MessageReader";
@@ -60,6 +61,30 @@ function writeDoubleLE(data: Uint8Array, value: number, offset: number): void {
 }
 
 describe("MessageWriter", () => {
+  it("rejects invalid ROS field names before generating writers", () => {
+    const globalWithMarker = globalThis as typeof globalThis & {
+      rosmsgSerializationWriterInjected?: boolean;
+    };
+    delete globalWithMarker.rosmsgSerializationWriterInjected;
+    const payloadName = 'x"]; globalThis.rosmsgSerializationWriterInjected = true; message["y';
+    const definitions: MessageDefinition[] = [
+      {
+        definitions: [
+          {
+            name: payloadName,
+            type: "string",
+            isArray: false,
+            isComplex: false,
+            isConstant: false,
+          },
+        ],
+      },
+    ];
+
+    expect(() => new MessageWriter(definitions)).toThrow(/valid ROS field name/);
+    expect(globalWithMarker.rosmsgSerializationWriterInjected).toBeUndefined();
+  });
+
   describe("simple type", () => {
     const testNum = (
       type: string,
