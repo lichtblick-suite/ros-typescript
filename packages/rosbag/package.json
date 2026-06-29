@@ -1,10 +1,10 @@
 {
-  "name": "@foxglove/rosbag",
-  "version": "0.4.1",
+  "name": "@lichtblick/rosbag",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxglove/ros-typescript.git"
+    "url": "https://github.com/lichtblick-suite/ros-typescript.git"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -25,9 +25,9 @@
     "docs": "typedoc"
   },
   "dependencies": {
-    "@foxglove/rosmsg": "workspace:^",
-    "@foxglove/rosmsg-serialization": "workspace:^",
-    "@foxglove/rostime": "workspace:^",
+    "@lichtblick/rosmsg": "workspace:^",
+    "@lichtblick/rosmsg-serialization": "workspace:^",
+    "@lichtblick/rostime": "workspace:^",
     "heap": "^0.2.7"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "@foxglove/rosbag2-node",
+  "name": "@lichtblick/rosbag2-node",
   "version": "5.0.0",
   "description": "ROS 2 bag reader and writer for node.js",
   "license": "MIT",
@@ -19,13 +19,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxglove/ros-typescript.git"
+    "url": "https://github.com/lichtblick-suite/ros-typescript.git"
   },
   "author": {
-    "name": "Foxglove Technologies",
-    "email": "support@foxglove.dev"
+    "name": "Lichtblick",
+    "email": "lichtblick@bmwgroup.com"
   },
-  "homepage": "https://github.com/foxglove/ros-typescript",
+  "homepage": "https://github.com/lichtblick-suite/ros-typescript",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -51,7 +51,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@foxglove/rosbag2": "workspace:^",
+    "@lichtblick/rosbag2": "workspace:^",
     "better-sqlite3": "^12.2.0"
   },
   "packageManager": "yarn@4.5.3"
