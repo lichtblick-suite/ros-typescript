@@ -1,6 +1,6 @@
 import { CdrReader } from "@foxglove/cdr";
 import { MessageDefinition, MessageDefinitionField } from "@foxglove/message-definition";
-import { Time as Ros1Time } from "@foxglove/rostime";
+import { Time as Ros1Time } from "@lichtblick/rostime";
 
 import { messageDefinitionHasDataFields } from "./messageDefinitionHasDataFields";
 
