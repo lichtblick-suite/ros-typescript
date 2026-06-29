@@ -59,9 +59,6 @@ jobs:
 
       - name: Publish to NPM (dry run)
         run: yarn workspace @foxglove/${{ matrix.package }} npm publish --provenance --access public --dry-run
-      - name: Publish to NPM
-        if: ${{ startsWith(github.ref, format('refs/tags/{0}/v', matrix.package)) }}
-        run: yarn workspace @foxglove/${{ matrix.package }} npm publish --provenance --access public
 
   rosbag-docs:
     name: rosbag docs
