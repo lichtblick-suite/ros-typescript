@@ -45,10 +45,10 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@foxglove/schemas": "^1.7.2",
     "@lichtblick/rosmsg-msgs-common": "workspace:^",
     "@lichtblick/rosmsg2-serialization": "workspace:^",
     "@lichtblick/rostime": "workspace:^",
-    "@foxglove/schemas": "^1.7.2",
     "js-yaml": "^4.1.1"
   },
   "packageManager": "yarn@4.5.3"
