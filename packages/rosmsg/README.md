@@ -1,8 +1,8 @@
-# @foxglove/rosmsg
+# @lichtblick/rosmsg
 
 > _ROS1 and ROS2 message definition parser_
 
-[![npm version](https://img.shields.io/npm/v/@foxglove/rosmsg.svg?style=flat)](https://www.npmjs.com/package/@foxglove/rosmsg)
+[![npm version](https://img.shields.io/npm/v/@lichtblick/rosmsg.svg?style=flat)](https://www.npmjs.com/package/@lichtblick/rosmsg)
 
 ## Introduction
 
@@ -13,7 +13,7 @@ This library supports both [ROS1](http://wiki.ros.org/msg) and [ROS 2](https://d
 ## ROS 1 Definition Usage
 
 ```Typescript
-import { parse, stringify } from "@foxglove/rosmsg";
+import { parse, stringify } from "@lichtblick/rosmsg";
 
 const definitionStr = `# geometry_msgs/Pose
 geometry_msgs/Point position
@@ -116,7 +116,7 @@ Prints:
 ## ROS 2 Definition Usage
 
 ```Typescript
-import { parse, stringify } from "@foxglove/rosmsg";
+import { parse, stringify } from "@lichtblick/rosmsg";
 
 const definitionStr = `# geometry_msgs/msg/Pose
 geometry_msgs/msg/Point position
@@ -220,18 +220,14 @@ Prints:
 
 ## ROS 2 IDL Support
 
-See (`@foxglove/ros2idl-parser`)[https://github.com/foxglove/omgidl/packages/ros2idl-parser] for our implementation of `ros2idl` schema support.
+See (`@lichtblick/ros2idl-parser`)[https://github.com/lichtblick-suite/omgidl/packages/ros2idl-parser] for our implementation of `ros2idl` schema support.
 
 ## License
 
-@foxglove/rosmsg is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+@lichtblick/rosmsg is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Releasing
 
 1. Run `yarn version --[major|minor|patch]` to bump version
 2. Run `git push && git push --tags` to push new tag
 3. GitHub Actions will take care of the rest
-
-## Stay in touch
-
-Join our [Discord community](https://foxglove.dev/chat) to ask questions, share feedback, and stay up to date on what our team is working on.

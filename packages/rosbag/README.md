@@ -1,17 +1,17 @@
-# @foxglove/rosbag &nbsp; [![npm version](https://img.shields.io/npm/v/@foxglove/rosbag.svg?style=flat)](https://www.npmjs.com/package/@foxglove/rosbag)
+# @lichtblick/rosbag &nbsp; [![npm version](https://img.shields.io/npm/v/@lichtblick/rosbag.svg?style=flat)](https://www.npmjs.com/package/@lichtblick/rosbag)
 
-`@foxglove/rosbag` is a node.js & browser compatible module for reading [rosbag](http://wiki.ros.org/rosbag) binary data files.
+`@lichtblick/rosbag` is a node.js & browser compatible module for reading [rosbag](http://wiki.ros.org/rosbag) binary data files.
 
 ## Installation
 
 ```
-npm install @foxglove/rosbag
+npm install @lichtblick/rosbag
 ```
 
 or
 
 ```
-yarn add @foxglove/rosbag
+yarn add @lichtblick/rosbag
 ```
 
 ## Quick start
@@ -21,8 +21,8 @@ The most common way to interact with a rosbag is to read data records for a spec
 Here is an example of reading messages from a rosbag in node.js:
 
 ```typescript
-import { Bag } from "@foxglove/rosbag";
-import { FileReader } from "@foxglove/rosbag/node";
+import { Bag } from "@lichtblick/rosbag";
+import { FileReader } from "@lichtblick/rosbag/node";
 
 async function logMessagesFromFooBar() {
   // open a new bag with a speific file reader
@@ -144,7 +144,3 @@ class Connection {
   messageDefinition: string,
 }
 ```
-
-## Stay in touch
-
-Join our [Discord community](https://foxglove.dev/chat) to ask questions, share feedback, and stay up to date on what our team is working on.

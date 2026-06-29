@@ -1,8 +1,8 @@
-# @foxglove/rostime
+# @lichtblick/rostime
 
 > _ROS (Robot Operating System) Time and Duration primitives and helper methods_
 
-[![npm version](https://img.shields.io/npm/v/@foxglove/rostime.svg?style=flat)](https://www.npmjs.com/package/@foxglove/rostime)
+[![npm version](https://img.shields.io/npm/v/@lichtblick/rostime.svg?style=flat)](https://www.npmjs.com/package/@lichtblick/rostime)
 
 ## Introduction
 
@@ -11,7 +11,7 @@
 ## Usage
 
 ```Typescript
-import * as rostime from "@foxglove/rostime";
+import * as rostime from "@lichtblick/rostime";
 
 const a = { sec: 1, nsec: 0 };
 const b = rostime.fixTime({ sec: 0, nsec: 1e9 });
@@ -20,14 +20,10 @@ console.log(`${rostime.toString(a)} == ${rostime.toString(b)} (${rostime.areEqua
 
 ## License
 
-@foxglove/rostime is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+@lichtblick/rostime is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Releasing
 
 1. Run `yarn version --[major|minor|patch]` to bump version
 2. Run `git push && git push --tags` to push new tag
 3. GitHub Actions will take care of the rest
-
-## Stay in touch
-
-Join our [Discord community](https://foxglove.dev/chat) to ask questions, share feedback, and stay up to date on what our team is working on.
