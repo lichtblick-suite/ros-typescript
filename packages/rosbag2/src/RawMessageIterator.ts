@@ -1,4 +1,4 @@
-import { fromNanoSec } from "@foxglove/rostime";
+import { fromNanoSec } from "@lichtblick/rostime";
 
 import type { RawMessage, TopicDefinition } from "./types";
 

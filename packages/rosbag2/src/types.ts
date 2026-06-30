@@ -1,4 +1,4 @@
-import { Duration, Time } from "@foxglove/rostime";
+import { Duration, Time } from "@lichtblick/rostime";
 
 export enum QosPolicyDurability {
   SystemDefault = 0,
