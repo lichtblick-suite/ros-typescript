@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@foxglove/message-definition": "0.5.0",
+    "@lichtblick/message-definition": "^1.0.0",
     "@lichtblick/rosmsg": "workspace:^"
   }
 }

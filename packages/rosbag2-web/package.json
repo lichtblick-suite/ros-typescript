@@ -51,7 +51,8 @@
   },
   "dependencies": {
     "@foxglove/sql.js": "^0.0.4",
-    "@lichtblick/rosbag2": "workspace:^"
+    "@lichtblick/rosbag2": "workspace:^",
+    "@lichtblick/rostime": "workspace:^"
   },
   "packageManager": "yarn@4.5.3"
 }
