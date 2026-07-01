@@ -1,4 +1,4 @@
-import { Duration, Time, areEqual as areTimesEqual } from "@foxglove/rostime";
+import { Duration, Time, areEqual as areTimesEqual } from "@lichtblick/rostime";
 
 import {
   QosPolicyDurability,

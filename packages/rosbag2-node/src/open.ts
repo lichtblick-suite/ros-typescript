@@ -1,5 +1,5 @@
-import { Rosbag2 } from "@foxglove/rosbag2";
-import { MessageReaderOptions } from "@foxglove/rosmsg2-serialization";
+import { Rosbag2 } from "@lichtblick/rosbag2";
+import { MessageReaderOptions } from "@lichtblick/rosmsg2-serialization";
 import { readdir } from "fs/promises";
 import path from "path";
 

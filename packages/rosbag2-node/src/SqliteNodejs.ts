@@ -6,8 +6,8 @@ import {
   SqliteDb,
   TopicDefinition,
   parseQosProfiles,
-} from "@foxglove/rosbag2";
-import { Time, fromNanoSec, toNanoSec } from "@foxglove/rostime";
+} from "@lichtblick/rosbag2";
+import { Time, fromNanoSec, toNanoSec } from "@lichtblick/rostime";
 import SQLite from "better-sqlite3";
 
 type DbContext = {

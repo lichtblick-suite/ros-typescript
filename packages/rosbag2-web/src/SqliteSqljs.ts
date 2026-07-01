@@ -1,3 +1,4 @@
+import initSqlJs, { Database, SqlJsStatic, Statement } from "@foxglove/sql.js";
 import {
   MessageReadOptions,
   MessageRow,
@@ -6,9 +7,8 @@ import {
   SqliteDb,
   TopicDefinition,
   parseQosProfiles,
-} from "@foxglove/rosbag2";
-import { Time, fromNanoSec, toNanoSec } from "@foxglove/rostime";
-import initSqlJs, { Database, SqlJsStatic, Statement } from "@foxglove/sql.js";
+} from "@lichtblick/rosbag2";
+import { Time, fromNanoSec, toNanoSec } from "@lichtblick/rostime";
 
 export type LocateWasmUrl = (url: string, scriptDirectory: string) => string;
 

@@ -1,6 +1,6 @@
 {
-  "name": "@foxglove/rostime",
-  "version": "1.1.3",
+  "name": "@lichtblick/rostime",
+  "version": "1.0.0",
   "description": "ROS Time and Duration primitives and helper methods",
   "license": "MIT",
   "keywords": [
@@ -16,13 +16,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxglove/ros-typescript.git"
+    "url": "https://github.com/lichtblick-suite/ros-typescript.git"
   },
   "author": {
-    "name": "Foxglove Technologies Inc",
-    "email": "contact@foxglove.dev"
+    "name": "Lichtblick",
+    "email": "lichtblick@bmwgroup.com"
   },
-  "homepage": "https://github.com/foxglove/ros-typescript",
+  "homepage": "https://github.com/lichtblick-suite/ros-typescript",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [

@@ -7,7 +7,7 @@
 
 /* eslint-disable jest/no-conditional-expect */
 
-import { compare, fromDate } from "@foxglove/rostime";
+import { compare, fromDate } from "@lichtblick/rostime";
 import compress from "compressjs";
 import fs from "fs";
 import lz4 from "lz4js";

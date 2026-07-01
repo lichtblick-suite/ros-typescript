@@ -1,6 +1,6 @@
 {
-  "name": "@foxglove/rosmsg2-serialization",
-  "version": "3.1.2",
+  "name": "@lichtblick/rosmsg2-serialization",
+  "version": "1.0.0",
   "description": "ROS 2 message serialization, for reading and writing bags and network messages",
   "license": "MIT",
   "keywords": [
@@ -17,13 +17,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxglove/ros-typescript.git"
+    "url": "https://github.com/lichtblick-suite/ros-typescript.git"
   },
   "author": {
-    "name": "Foxglove Technologies Inc",
-    "email": "contact@foxglove.dev"
+    "name": "Lichtblick",
+    "email": "lichtblick@bmwgroup.com"
   },
-  "homepage": "https://github.com/foxglove/ros-typescript",
+  "homepage": "https://github.com/lichtblick-suite/ros-typescript",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@foxglove/ros2idl-parser": "^0.3.6",
-    "@foxglove/rosmsg": "workspace:*",
+    "@lichtblick/rosmsg": "workspace:*",
     "@sounisi5011/jest-binary-data-matchers": "^1.2.1",
     "@types/jest": "^30.0.0",
     "jest": "^30.0.3",
@@ -54,7 +54,7 @@
   "dependencies": {
     "@foxglove/cdr": "^3.5.1",
     "@foxglove/message-definition": "0.5.0",
-    "@foxglove/rostime": "workspace:^"
+    "@lichtblick/rostime": "workspace:^"
   },
   "packageManager": "yarn@4.5.3"
 }

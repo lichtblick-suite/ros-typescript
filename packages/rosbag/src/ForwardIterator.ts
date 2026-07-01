@@ -1,4 +1,4 @@
-import { compare, add as addTime } from "@foxglove/rostime";
+import { compare, add as addTime } from "@lichtblick/rostime";
 import Heap from "heap";
 
 import { BaseIterator } from "./BaseIterator";

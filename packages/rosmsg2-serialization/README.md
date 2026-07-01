@@ -1,20 +1,20 @@
-# @foxglove/rosmsg2-serialization
+# @lichtblick/rosmsg2-serialization
 
 > _ROS 2 (Robot Operating System) message serialization, for reading and writing bags and network messages_
 
-[![npm version](https://img.shields.io/npm/v/@foxglove/rosmsg2-serialization.svg?style=flat)](https://www.npmjs.com/package/@foxglove/rosmsg2-serialization)
+[![npm version](https://img.shields.io/npm/v/@lichtblick/rosmsg2-serialization.svg?style=flat)](https://www.npmjs.com/package/@lichtblick/rosmsg2-serialization)
 
 ## MessageReader
 
 Message reader deserializes ROS 2 CDR messages into plain objects. The messages are fully deserialized.
 
 ```typescript
-import { MessageReader } from "@foxglove/rosmsg2-serialization";
+import { MessageReader } from "@lichtblick/rosmsg2-serialization";
 
-// message definition comes from `parse()` in @foxglove/rosmsg
+// message definition comes from `parse()` in @lichtblick/rosmsg
 const reader = new MessageReader(messageDefinition);
 
-// specify a different `timeType` for time objects compatible with ROS 1 and @foxglove/rostime
+// specify a different `timeType` for time objects compatible with ROS 1 and @lichtblick/rostime
 const reader = new MessageReader(messageDefinition, { timeType: "sec,nsec" });
 
 // deserialize a buffer into an object
@@ -29,9 +29,9 @@ message.header.stamp;
 Convert an object, array, or primitive value into binary data using ROS 2 CDR message serialization.
 
 ```Typescript
-import { MessageWriter } from "@foxglove/rosmsg2-serialization";
+import { MessageWriter } from "@lichtblick/rosmsg2-serialization";
 
-// message definition comes from `parse()` in @foxglove/rosmsg
+// message definition comes from `parse()` in @lichtblick/rosmsg
 const writer = new MessageWriter(pointStampedMessageDefinition);
 
 // serialize the passed in object to a Uint8Array as a geometry_msgs/PointStamped message
@@ -52,14 +52,10 @@ const uint8Array = writer.writeMessage({
 
 ## License
 
-@foxglove/rosmsg2-serialization is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+@lichtblick/rosmsg2-serialization is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Releasing
 
 1. Run `yarn version --[major|minor|patch]` to bump version
 2. Run `git push && git push --tags` to push new tag
 3. GitHub Actions will take care of the rest
-
-## Stay in touch
-
-Join our [Discord community](https://foxglove.dev/chat) to ask questions, share feedback, and stay up to date on what our team is working on.

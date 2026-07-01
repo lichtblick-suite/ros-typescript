@@ -1,5 +1,5 @@
-import { MessageDefinition } from "@foxglove/message-definition";
-import { parse, ParseOptions } from "@foxglove/rosmsg";
+import { MessageDefinition } from "@lichtblick/message-definition";
+import { parse, ParseOptions } from "@lichtblick/rosmsg";
 import { mkdir, readdir, readFile, writeFile } from "fs/promises";
 import { join, basename, sep } from "path";
 import { format, Options } from "prettier";

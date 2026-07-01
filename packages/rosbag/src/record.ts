@@ -5,8 +5,8 @@
 // found in the LICENSE file in the root directory of this source tree.
 // You may not use this file except in compliance with the License.
 
-import { MessageReader } from "@foxglove/rosmsg-serialization";
-import { Time } from "@foxglove/rostime";
+import { MessageReader } from "@lichtblick/rosmsg-serialization";
+import { Time } from "@lichtblick/rostime";
 
 import { extractFields, extractTime } from "./fields";
 

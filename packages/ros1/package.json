@@ -1,6 +1,6 @@
 {
-  "name": "@foxglove/ros1",
-  "version": "3.0.1",
+  "name": "@lichtblick/ros1",
+  "version": "1.0.0",
   "description": "Standalone TypeScript implementation of the ROS 1 (Robot Operating System) protocol with a pluggable transport layer",
   "license": "MIT",
   "keywords": [
@@ -15,13 +15,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxglove/ros-typescript.git"
+    "url": "https://github.com/lichtblick-suite/ros-typescript.git"
   },
   "author": {
-    "name": "Foxglove Technologies Inc",
-    "email": "contact@foxglove.dev"
+    "name": "Lichtblick",
+    "email": "lichtblick@bmwgroup.com"
   },
-  "homepage": "https://github.com/foxglove/ros-typescript",
+  "homepage": "https://github.com/lichtblick-suite/ros-typescript",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "exports": {
@@ -58,9 +58,9 @@
   },
   "dependencies": {
     "@foxglove/message-definition": "0.5.0",
-    "@foxglove/rosmsg": "workspace:^",
-    "@foxglove/rosmsg-serialization": "workspace:^",
-    "@foxglove/xmlrpc": "workspace:^",
+    "@lichtblick/rosmsg": "workspace:^",
+    "@lichtblick/rosmsg-serialization": "workspace:^",
+    "@lichtblick/xmlrpc": "workspace:^",
     "eventemitter3": "^5.0.0",
     "ipaddr.js": "^2.0.1"
   }

@@ -1,6 +1,6 @@
 /* eslint-disable jest/no-conditional-expect */
-import { Rosbag2 } from "@foxglove/rosbag2";
-import { Time, isGreaterThan, isTimeInRangeInclusive } from "@foxglove/rostime";
+import { Rosbag2 } from "@lichtblick/rosbag2";
+import { Time, isGreaterThan, isTimeInRangeInclusive } from "@lichtblick/rostime";
 import path from "path";
 
 import { openNodejsFile, openNodejsDirectory } from "./open";

@@ -1,0 +1,41 @@
+name: Publish to NPM
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # provenance
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org/
+
+      - run: corepack enable
+      - run: yarn install --immutable
+
+      # tag looks like "rosbag/v1.2.3" -> extract "rosbag"
+      - name: Resolve package
+        id: pkg
+        run: |
+          PKG_NAME="${GITHUB_REF_NAME%%/v*}"
+          ALLOWED="ros1 rosbag rosbag2 rosbag2-node rosbag2-web rosmsg rosmsg2-serialization rosmsg-msgs-common rosmsg-serialization rostime xmlrpc"
+          if ! echo " $ALLOWED " | grep -q " $PKG_NAME "; then
+            echo "::error::Unknown package '$PKG_NAME' derived from tag '$GITHUB_REF_NAME'"
+            exit 1
+          fi
+          echo "name=$PKG_NAME" >> "$GITHUB_OUTPUT"
+
+      # build the package + its deps in order
+      - run: yarn workspaces foreach -Rp --topological-dev --from "@lichtblick/${{ steps.pkg.outputs.name }}" run build
+
+      - run: yarn workspace "@lichtblick/${{ steps.pkg.outputs.name }}" npm publish --provenance --access public

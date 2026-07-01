@@ -5,7 +5,7 @@
 // found in the LICENSE file in the root directory of this source tree.
 // You may not use this file except in compliance with the License.
 
-import { compare, isGreaterThan, Time } from "@foxglove/rostime";
+import { compare, isGreaterThan, Time } from "@lichtblick/rostime";
 
 import { extractFields } from "./fields";
 import nmerge from "./nmerge";

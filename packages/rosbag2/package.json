@@ -1,6 +1,6 @@
 {
-  "name": "@foxglove/rosbag2",
-  "version": "6.0.0",
+  "name": "@lichtblick/rosbag2",
+  "version": "1.0.6",
   "description": "ROS 2 bag reader and writer abstract implementation",
   "license": "MIT",
   "keywords": [
@@ -17,13 +17,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxglove/ros-typescript.git"
+    "url": "https://github.com/lichtblick-suite/ros-typescript.git"
   },
   "author": {
-    "name": "Foxglove Technologies Inc",
-    "email": "contact@foxglove.dev"
+    "name": "Lichtblick",
+    "email": "lichtblick@bmwgroup.com"
   },
-  "homepage": "https://github.com/foxglove/ros-typescript",
+  "homepage": "https://github.com/lichtblick-suite/ros-typescript",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -45,10 +45,10 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@foxglove/rosmsg-msgs-common": "workspace:^",
-    "@foxglove/rosmsg2-serialization": "workspace:^",
-    "@foxglove/rostime": "workspace:^",
     "@foxglove/schemas": "^1.7.2",
+    "@lichtblick/rosmsg-msgs-common": "workspace:^",
+    "@lichtblick/rosmsg2-serialization": "workspace:^",
+    "@lichtblick/rostime": "workspace:^",
     "js-yaml": "^4.1.1"
   },
   "packageManager": "yarn@4.5.3"

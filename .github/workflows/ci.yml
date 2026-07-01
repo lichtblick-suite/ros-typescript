@@ -48,9 +48,9 @@ jobs:
 
       - run: yarn install --immutable
 
-      - run: yarn workspaces foreach -Rp --topological-dev --from @foxglove/${{ matrix.package }} run build
+      - run: yarn workspaces foreach -Rp --topological-dev --from @lichtblick/${{ matrix.package }} run build
       - run: yarn lint:ci packages/${{ matrix.package }}
-      - run: yarn workspace @foxglove/${{ matrix.package }} run test
+      - run: yarn workspace @lichtblick/${{ matrix.package }} run test
 
       - name: build xmlrpc examples
         if: ${{ matrix.package == 'xmlrpc' }}
@@ -58,56 +58,4 @@ jobs:
         working-directory: packages/xmlrpc/examples
 
       - name: Publish to NPM (dry run)
-        run: yarn workspace @foxglove/${{ matrix.package }} npm publish --provenance --access public --dry-run
-      - name: Publish to NPM
-        if: ${{ startsWith(github.ref, format('refs/tags/{0}/v', matrix.package)) }}
-        run: yarn workspace @foxglove/${{ matrix.package }} npm publish --provenance --access public
-
-  rosbag-docs:
-    name: rosbag docs
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    steps:
-      - uses: actions/checkout@v6
-
-      - run: corepack enable
-
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 22
-          registry-url: https://registry.npmjs.org
-          cache: yarn
-
-      - run: yarn install --immutable
-
-      - run: yarn workspaces foreach -Rp --topological-dev --from @foxglove/rosbag run build
-      - run: yarn workspace @foxglove/rosbag docs
-
-      - name: Deploy to GitHub pages
-        uses: JamesIves/github-pages-deploy-action@v4.8.0
-        with:
-          branch: gh-pages
-          folder: packages/rosbag/docs
-          target-folder: rosbag-docs
-
-  rosmsg-serialization-bench:
-    name: rosmsg-serialization benchmark
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-
-      - run: corepack enable
-
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 22
-          registry-url: https://registry.npmjs.org
-          cache: yarn
-
-      - run: yarn install --immutable
-
-      - run: yarn workspaces foreach -Rp --topological-dev --from @foxglove/rosmsg run build
-      - run: yarn workspace @foxglove/rosmsg bench:benny
+        run: yarn workspace @lichtblick/${{ matrix.package }} npm publish --provenance --access public --dry-run

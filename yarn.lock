@@ -887,28 +887,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxglove/ros1@workspace:^, @foxglove/ros1@workspace:packages/ros1":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/ros1@workspace:packages/ros1"
-  dependencies:
-    "@foxglove/message-definition": "npm:0.5.0"
-    "@foxglove/rosmsg": "workspace:^"
-    "@foxglove/rosmsg-serialization": "workspace:^"
-    "@foxglove/xmlrpc": "workspace:^"
-    "@types/jest": "npm:^30.0.0"
-    esbuild: "npm:^0.25.4"
-    esbuild-runner: "npm:^2.2.2"
-    eventemitter3: "npm:^5.0.0"
-    ipaddr.js: "npm:^2.0.1"
-    jest: "npm:^30.0.3"
-    prettier: "npm:^3.6.2"
-    ts-jest: "npm:^29.4.0"
-    typescript: "npm:^5.8.3"
-  bin:
-    roscore: ./dist/nodejs/roscore.js
-  languageName: unknown
-  linkType: soft
-
 "@foxglove/ros2idl-parser@npm:^0.3.6":
   version: 0.3.6
   resolution: "@foxglove/ros2idl-parser@npm:0.3.6"
@@ -920,169 +898,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxglove/rosbag2-node@workspace:packages/rosbag2-node":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/rosbag2-node@workspace:packages/rosbag2-node"
-  dependencies:
-    "@foxglove/rosbag2": "workspace:^"
-    "@types/better-sqlite3": "npm:^7.6.12"
-    "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.0.8"
-    better-sqlite3: "npm:^12.2.0"
-    jest: "npm:^30.0.3"
-    prettier: "npm:^3.6.2"
-    ts-jest: "npm:^29.4.0"
-    typescript: "npm:^5.8.3"
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/rosbag2-web@workspace:packages/rosbag2-web":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/rosbag2-web@workspace:packages/rosbag2-web"
-  dependencies:
-    "@foxglove/rosbag2": "workspace:^"
-    "@foxglove/sql.js": "npm:^0.0.4"
-    "@types/jest": "npm:^30.0.0"
-    "@types/sql.js": "npm:^1.4.9"
-    "@types/wicg-entries-api": "npm:^2020.8.5"
-    "@types/wicg-file-system-access": "npm:^2023.10.6"
-    jest: "npm:^30.0.3"
-    jest-environment-jsdom: "npm:^30.0.5"
-    prettier: "npm:^3.6.2"
-    ts-jest: "npm:^29.4.0"
-    typescript: "npm:^5.8.3"
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/rosbag2@workspace:^, @foxglove/rosbag2@workspace:packages/rosbag2":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/rosbag2@workspace:packages/rosbag2"
-  dependencies:
-    "@foxglove/rosmsg-msgs-common": "workspace:^"
-    "@foxglove/rosmsg2-serialization": "workspace:^"
-    "@foxglove/rostime": "workspace:^"
-    "@foxglove/schemas": "npm:^1.7.2"
-    "@types/jest": "npm:^30.0.0"
-    "@types/js-yaml": "npm:^4.0.9"
-    jest: "npm:^30.0.3"
-    js-yaml: "npm:^4.1.1"
-    prettier: "npm:^3.6.2"
-    ts-jest: "npm:^29.4.0"
-    typescript: "npm:^5.8.3"
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/rosbag@workspace:packages/rosbag":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/rosbag@workspace:packages/rosbag"
-  dependencies:
-    "@foxglove/rosmsg": "workspace:^"
-    "@foxglove/rosmsg-serialization": "workspace:^"
-    "@foxglove/rostime": "workspace:^"
-    "@foxglove/tsconfig": "npm:^3.1.0"
-    "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.0.8"
-    compressjs: "npm:^1.0.3"
-    cross-env: "npm:^10.0.0"
-    heap: "npm:^0.2.7"
-    jest: "npm:^30.0.3"
-    jest-cli: "npm:^30.0.3"
-    jest-environment-jsdom: "npm:^30.0.5"
-    lz4js: "npm:^0.2.0"
-    prettier: "npm:^3.6.2"
-    rimraf: "npm:^6.0.1"
-    ts-jest: "npm:^29.4.0"
-    typedoc: "npm:^0.28.9"
-    typescript: "npm:^5.8.3"
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/rosmsg-msgs-common@npm:^3.0.0, @foxglove/rosmsg-msgs-common@workspace:^, @foxglove/rosmsg-msgs-common@workspace:packages/rosmsg-msgs-common":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/rosmsg-msgs-common@workspace:packages/rosmsg-msgs-common"
+"@foxglove/rosmsg-msgs-common@npm:^3.0.0":
+  version: 3.2.3
+  resolution: "@foxglove/rosmsg-msgs-common@npm:3.2.3"
   dependencies:
     "@foxglove/message-definition": "npm:0.5.0"
-    "@foxglove/rosmsg": "workspace:^"
-    "@types/node": "npm:^24.0.8"
-    esbuild: "npm:^0.25.4"
-    esbuild-runner: "npm:^2.2.2"
-    prettier: "npm:^3.6.2"
-    typescript: "npm:^5.8.3"
-  languageName: unknown
-  linkType: soft
+    "@foxglove/rosmsg": "npm:^5.0.5"
+  checksum: 10c0/daf015a8f9a3604bf29391ea5deab64a214942724a30b479cd8891552c8c0c8d2c640ec7f9a984b770db5d401ff5138d1768e124a7e6b148c5ca743bc4917bca
+  languageName: node
+  linkType: hard
 
-"@foxglove/rosmsg-serialization@workspace:^, @foxglove/rosmsg-serialization@workspace:packages/rosmsg-serialization":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/rosmsg-serialization@workspace:packages/rosmsg-serialization"
+"@foxglove/rosmsg@npm:^5.0.5":
+  version: 5.0.5
+  resolution: "@foxglove/rosmsg@npm:5.0.5"
   dependencies:
     "@foxglove/message-definition": "npm:0.5.0"
-    "@foxglove/rosmsg": "workspace:*"
-    "@foxglove/tsconfig": "npm:^3.1.0"
-    "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.0.8"
-    benny: "npm:^3.7.1"
-    console-table-printer: "npm:^2.14.6"
-    esbuild: "npm:^0.25.4"
-    jest: "npm:^30.0.3"
-    kelonio: "npm:^0.11.0"
-    percentile: "npm:^1.6.0"
-    prettier: "npm:^3.6.2"
-    ts-jest: "npm:^29.4.0"
-    ts-node: "npm:^10.9.2"
-    typescript: "npm:^5.8.3"
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/rosmsg2-serialization@workspace:^, @foxglove/rosmsg2-serialization@workspace:packages/rosmsg2-serialization":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/rosmsg2-serialization@workspace:packages/rosmsg2-serialization"
-  dependencies:
-    "@foxglove/cdr": "npm:^3.5.1"
-    "@foxglove/message-definition": "npm:0.5.0"
-    "@foxglove/ros2idl-parser": "npm:^0.3.6"
-    "@foxglove/rosmsg": "workspace:*"
-    "@foxglove/rostime": "workspace:^"
-    "@sounisi5011/jest-binary-data-matchers": "npm:^1.2.1"
-    "@types/jest": "npm:^30.0.0"
-    jest: "npm:^30.0.3"
-    prettier: "npm:^3.6.2"
-    ts-jest: "npm:^29.4.0"
-    typescript: "npm:^5.8.3"
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/rosmsg@workspace:*, @foxglove/rosmsg@workspace:^, @foxglove/rosmsg@workspace:packages/rosmsg":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/rosmsg@workspace:packages/rosmsg"
-  dependencies:
-    "@foxglove/message-definition": "npm:0.5.0"
-    "@types/jest": "npm:^30.0.0"
-    "@types/nearley": "npm:^2.11.5"
-    jest: "npm:^30.0.3"
     md5-typescript: "npm:^1.0.5"
-    moo: "npm:^0.5.2"
-    nearley: "npm:^2.20.1"
-    nearley-loader: "npm:^2.0.0"
-    prettier: "npm:^3.6.2"
-    ts-jest: "npm:^29.4.0"
-    ts-loader: "npm:^9.5.2"
-    typescript: "npm:^5.8.3"
-    webpack: "npm:^5.101.0"
-    webpack-cli: "npm:^6.0.1"
-  languageName: unknown
-  linkType: soft
-
-"@foxglove/rostime@workspace:^, @foxglove/rostime@workspace:packages/rostime":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/rostime@workspace:packages/rostime"
-  dependencies:
-    "@types/jest": "npm:^30.0.0"
-    jest: "npm:^30.0.3"
-    prettier: "npm:^3.6.2"
-    ts-jest: "npm:^29.4.0"
-    typescript: "npm:^5.8.3"
-  languageName: unknown
-  linkType: soft
+  checksum: 10c0/be54349eede72317bf42f7b5706804fdc7152d6e0af43ad1e9f0ee4b5a2f92f6a218453e4f9c22fd1571ad0528bd7d0be80f6f2640fbcdb53778422b4372fc1a
+  languageName: node
+  linkType: hard
 
 "@foxglove/schemas@npm:^1.7.2":
   version: 1.7.2
@@ -1117,24 +951,6 @@ __metadata:
     sax: "npm:^1.2.4"
     xmlbuilder2: "npm:^4.0.3"
   languageName: node
-  linkType: soft
-
-"@foxglove/xmlrpc@workspace:^, @foxglove/xmlrpc@workspace:packages/xmlrpc":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/xmlrpc@workspace:packages/xmlrpc"
-  dependencies:
-    "@foxglove/just-fetch": "npm:^1.2.4"
-    "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.0.8"
-    "@types/sax": "npm:^1.2.3"
-    byte-base64: "npm:^1.1.0"
-    jest: "npm:^30.0.3"
-    prettier: "npm:^3.6.2"
-    sax: "npm:^1.2.4"
-    ts-jest: "npm:^29.4.0"
-    typescript: "npm:^5.8.3"
-    xmlbuilder2: "npm:^4.0.3"
-  languageName: unknown
   linkType: soft
 
 "@gerrit0/mini-shiki@npm:^3.9.0":
@@ -1827,6 +1643,219 @@ __metadata:
   checksum: 10c0/fb547ba31658c4d74eb17e7389f4908bf7c44cef47acb4c5baa57289daf68e6fe53c639f41f751b3923aca67010501264f70e7b49978ad1f040294b22c37b333
   languageName: node
   linkType: hard
+
+"@lichtblick/message-definition@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@lichtblick/message-definition@npm:1.0.0"
+  checksum: 10c0/dfa65765f29cad4ed18e3fc28b88db251df3d58921ad94aebe41282e961cfbd6916c776cee960af37e31b03054b17731a8f773d21f7bde33bcfacb4639b95c03
+  languageName: node
+  linkType: hard
+
+"@lichtblick/ros1@workspace:^, @lichtblick/ros1@workspace:packages/ros1":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/ros1@workspace:packages/ros1"
+  dependencies:
+    "@foxglove/message-definition": "npm:0.5.0"
+    "@lichtblick/rosmsg": "workspace:^"
+    "@lichtblick/rosmsg-serialization": "workspace:^"
+    "@lichtblick/xmlrpc": "workspace:^"
+    "@types/jest": "npm:^30.0.0"
+    esbuild: "npm:^0.25.4"
+    esbuild-runner: "npm:^2.2.2"
+    eventemitter3: "npm:^5.0.0"
+    ipaddr.js: "npm:^2.0.1"
+    jest: "npm:^30.0.3"
+    prettier: "npm:^3.6.2"
+    ts-jest: "npm:^29.4.0"
+    typescript: "npm:^5.8.3"
+  bin:
+    roscore: ./dist/nodejs/roscore.js
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/rosbag2-node@workspace:packages/rosbag2-node":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/rosbag2-node@workspace:packages/rosbag2-node"
+  dependencies:
+    "@lichtblick/rosbag2": "workspace:^"
+    "@types/better-sqlite3": "npm:^7.6.12"
+    "@types/jest": "npm:^30.0.0"
+    "@types/node": "npm:^24.0.8"
+    better-sqlite3: "npm:^12.2.0"
+    jest: "npm:^30.0.3"
+    prettier: "npm:^3.6.2"
+    ts-jest: "npm:^29.4.0"
+    typescript: "npm:^5.8.3"
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/rosbag2-web@workspace:packages/rosbag2-web":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/rosbag2-web@workspace:packages/rosbag2-web"
+  dependencies:
+    "@foxglove/sql.js": "npm:^0.0.4"
+    "@lichtblick/rosbag2": "workspace:^"
+    "@lichtblick/rostime": "workspace:^"
+    "@types/jest": "npm:^30.0.0"
+    "@types/sql.js": "npm:^1.4.9"
+    "@types/wicg-entries-api": "npm:^2020.8.5"
+    "@types/wicg-file-system-access": "npm:^2023.10.6"
+    jest: "npm:^30.0.3"
+    jest-environment-jsdom: "npm:^30.0.5"
+    prettier: "npm:^3.6.2"
+    ts-jest: "npm:^29.4.0"
+    typescript: "npm:^5.8.3"
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/rosbag2@workspace:^, @lichtblick/rosbag2@workspace:packages/rosbag2":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/rosbag2@workspace:packages/rosbag2"
+  dependencies:
+    "@foxglove/schemas": "npm:^1.7.2"
+    "@lichtblick/rosmsg-msgs-common": "workspace:^"
+    "@lichtblick/rosmsg2-serialization": "workspace:^"
+    "@lichtblick/rostime": "workspace:^"
+    "@types/jest": "npm:^30.0.0"
+    "@types/js-yaml": "npm:^4.0.9"
+    jest: "npm:^30.0.3"
+    js-yaml: "npm:^4.1.1"
+    prettier: "npm:^3.6.2"
+    ts-jest: "npm:^29.4.0"
+    typescript: "npm:^5.8.3"
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/rosbag@workspace:packages/rosbag":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/rosbag@workspace:packages/rosbag"
+  dependencies:
+    "@foxglove/tsconfig": "npm:^3.1.0"
+    "@lichtblick/rosmsg": "workspace:^"
+    "@lichtblick/rosmsg-serialization": "workspace:^"
+    "@lichtblick/rostime": "workspace:^"
+    "@types/jest": "npm:^30.0.0"
+    "@types/node": "npm:^24.0.8"
+    compressjs: "npm:^1.0.3"
+    cross-env: "npm:^10.0.0"
+    heap: "npm:^0.2.7"
+    jest: "npm:^30.0.3"
+    jest-cli: "npm:^30.0.3"
+    jest-environment-jsdom: "npm:^30.0.5"
+    lz4js: "npm:^0.2.0"
+    prettier: "npm:^3.6.2"
+    rimraf: "npm:^6.0.1"
+    ts-jest: "npm:^29.4.0"
+    typedoc: "npm:^0.28.9"
+    typescript: "npm:^5.8.3"
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/rosmsg-msgs-common@workspace:^, @lichtblick/rosmsg-msgs-common@workspace:packages/rosmsg-msgs-common":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/rosmsg-msgs-common@workspace:packages/rosmsg-msgs-common"
+  dependencies:
+    "@foxglove/message-definition": "npm:0.5.0"
+    "@lichtblick/message-definition": "npm:^1.0.0"
+    "@lichtblick/rosmsg": "workspace:^"
+    "@types/node": "npm:^24.0.8"
+    esbuild: "npm:^0.25.4"
+    esbuild-runner: "npm:^2.2.2"
+    prettier: "npm:^3.6.2"
+    typescript: "npm:^5.8.3"
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/rosmsg-serialization@workspace:^, @lichtblick/rosmsg-serialization@workspace:packages/rosmsg-serialization":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/rosmsg-serialization@workspace:packages/rosmsg-serialization"
+  dependencies:
+    "@foxglove/message-definition": "npm:0.5.0"
+    "@foxglove/tsconfig": "npm:^3.1.0"
+    "@lichtblick/rosmsg": "workspace:*"
+    "@types/jest": "npm:^30.0.0"
+    "@types/node": "npm:^24.0.8"
+    benny: "npm:^3.7.1"
+    console-table-printer: "npm:^2.14.6"
+    esbuild: "npm:^0.25.4"
+    jest: "npm:^30.0.3"
+    kelonio: "npm:^0.11.0"
+    percentile: "npm:^1.6.0"
+    prettier: "npm:^3.6.2"
+    ts-jest: "npm:^29.4.0"
+    ts-node: "npm:^10.9.2"
+    typescript: "npm:^5.8.3"
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/rosmsg2-serialization@workspace:^, @lichtblick/rosmsg2-serialization@workspace:packages/rosmsg2-serialization":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/rosmsg2-serialization@workspace:packages/rosmsg2-serialization"
+  dependencies:
+    "@foxglove/cdr": "npm:^3.5.1"
+    "@foxglove/message-definition": "npm:0.5.0"
+    "@foxglove/ros2idl-parser": "npm:^0.3.6"
+    "@lichtblick/rosmsg": "workspace:*"
+    "@lichtblick/rostime": "workspace:^"
+    "@sounisi5011/jest-binary-data-matchers": "npm:^1.2.1"
+    "@types/jest": "npm:^30.0.0"
+    jest: "npm:^30.0.3"
+    prettier: "npm:^3.6.2"
+    ts-jest: "npm:^29.4.0"
+    typescript: "npm:^5.8.3"
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/rosmsg@workspace:*, @lichtblick/rosmsg@workspace:^, @lichtblick/rosmsg@workspace:packages/rosmsg":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/rosmsg@workspace:packages/rosmsg"
+  dependencies:
+    "@foxglove/message-definition": "npm:0.5.0"
+    "@types/jest": "npm:^30.0.0"
+    "@types/nearley": "npm:^2.11.5"
+    jest: "npm:^30.0.3"
+    md5-typescript: "npm:^1.0.5"
+    moo: "npm:^0.5.2"
+    nearley: "npm:^2.20.1"
+    nearley-loader: "npm:^2.0.0"
+    prettier: "npm:^3.6.2"
+    ts-jest: "npm:^29.4.0"
+    ts-loader: "npm:^9.5.2"
+    typescript: "npm:^5.8.3"
+    webpack: "npm:^5.101.0"
+    webpack-cli: "npm:^6.0.1"
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/rostime@workspace:^, @lichtblick/rostime@workspace:packages/rostime":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/rostime@workspace:packages/rostime"
+  dependencies:
+    "@types/jest": "npm:^30.0.0"
+    jest: "npm:^30.0.3"
+    prettier: "npm:^3.6.2"
+    ts-jest: "npm:^29.4.0"
+    typescript: "npm:^5.8.3"
+  languageName: unknown
+  linkType: soft
+
+"@lichtblick/xmlrpc@workspace:^, @lichtblick/xmlrpc@workspace:packages/xmlrpc":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/xmlrpc@workspace:packages/xmlrpc"
+  dependencies:
+    "@foxglove/just-fetch": "npm:^1.2.4"
+    "@types/jest": "npm:^30.0.0"
+    "@types/node": "npm:^24.0.8"
+    "@types/sax": "npm:^1.2.3"
+    byte-base64: "npm:^1.1.0"
+    jest: "npm:^30.0.3"
+    prettier: "npm:^3.6.2"
+    sax: "npm:^1.2.4"
+    ts-jest: "npm:^29.4.0"
+    typescript: "npm:^5.8.3"
+    xmlbuilder2: "npm:^4.0.3"
+  languageName: unknown
+  linkType: soft
 
 "@napi-rs/wasm-runtime@npm:^0.2.11":
   version: 0.2.11
@@ -8329,7 +8358,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ros1-chatter@workspace:packages/ros1/examples/ros1-chatter"
   dependencies:
-    "@foxglove/ros1": "workspace:^"
+    "@lichtblick/ros1": "workspace:^"
     "@types/node": "npm:^24.0.8"
     ts-node: "npm:^10.7.0"
     tslib: "npm:^2.1.0"
@@ -8341,7 +8370,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ros1-turtlesim-test@workspace:packages/ros1/examples/ros1-turtlesim-test"
   dependencies:
-    "@foxglove/ros1": "workspace:^"
+    "@lichtblick/ros1": "workspace:^"
     "@types/node": "npm:^24.0.8"
     ts-node: "npm:^10.7.0"
     tslib: "npm:^2.1.0"

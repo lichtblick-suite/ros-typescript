@@ -1,6 +1,6 @@
 {
-  "name": "@foxglove/rosmsg-msgs-common",
-  "version": "3.2.3",
+  "name": "@lichtblick/rosmsg-msgs-common",
+  "version": "1.0.1",
   "description": "Common ROS message definitions using @foxglove/rosmsg",
   "license": "MIT",
   "keywords": [
@@ -20,13 +20,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxglove/ros-typescript.git"
+    "url": "https://github.com/lichtblick-suite/ros-typescript.git"
   },
   "author": {
-    "name": "Foxglove Technologies Inc",
-    "email": "contact@foxglove.dev"
+    "name": "Lichtblick",
+    "email": "lichtblick@bmwgroup.com"
   },
-  "homepage": "https://github.com/foxglove/ros-typescript",
+  "homepage": "https://github.com/lichtblick-suite/ros-typescript",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@foxglove/message-definition": "0.5.0",
-    "@foxglove/rosmsg": "workspace:^"
+    "@lichtblick/message-definition": "^1.0.0",
+    "@lichtblick/rosmsg": "workspace:^"
   }
 }

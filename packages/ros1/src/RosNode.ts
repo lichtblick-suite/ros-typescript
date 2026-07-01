@@ -4,8 +4,8 @@ import {
   md5 as rosMsgMd5sum,
   stringify as rosMsgDefinitionText,
 } from "@foxglove/rosmsg";
-import { MessageWriter } from "@foxglove/rosmsg-serialization";
-import { HttpServer, XmlRpcFault, XmlRpcValue } from "@foxglove/xmlrpc";
+import { MessageWriter } from "@lichtblick/rosmsg-serialization";
+import { HttpServer, XmlRpcFault, XmlRpcValue } from "@lichtblick/xmlrpc";
 import { EventEmitter } from "eventemitter3";
 
 import { Client } from "./Client";
