@@ -5,9 +5,9 @@
 // found in the LICENSE file in the root directory of this source tree.
 // You may not use this file except in compliance with the License.
 
-import { parse as parseMessageDefinition } from "@foxglove/rosmsg";
-import { MessageReader } from "@foxglove/rosmsg-serialization";
-import { compare, Time } from "@foxglove/rostime";
+import { parse as parseMessageDefinition } from "@lichtblick/rosmsg";
+import { MessageReader } from "@lichtblick/rosmsg-serialization";
+import { compare, Time } from "@lichtblick/rostime";
 
 import BagReader from "./BagReader";
 import { ForwardIterator } from "./ForwardIterator";

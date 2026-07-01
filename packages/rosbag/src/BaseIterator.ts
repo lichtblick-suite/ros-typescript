@@ -1,4 +1,4 @@
-import type { Time } from "@foxglove/rostime";
+import type { Time } from "@lichtblick/rostime";
 import Heap from "heap";
 
 import { IBagReader } from "./IBagReader";
