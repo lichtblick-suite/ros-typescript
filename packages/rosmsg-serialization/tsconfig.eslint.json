@@ -8,6 +8,8 @@
     "verbatimModuleSyntax": false,
     "isolatedDeclarations": false,
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
+    "types": ["jest", "node"]
   }
 }

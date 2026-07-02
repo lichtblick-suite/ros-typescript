@@ -48,8 +48,8 @@
     "@types/jest": "^30.0.0",
     "jest": "^30.0.3",
     "prettier": "^3.6.2",
-    "ts-jest": "^29.4.0",
-    "typescript": "^5.9.3"
+    "ts-jest": "^29.4.11",
+    "typescript": "6.0.3"
   },
   "dependencies": {
     "@foxglove/cdr": "^3.5.1",

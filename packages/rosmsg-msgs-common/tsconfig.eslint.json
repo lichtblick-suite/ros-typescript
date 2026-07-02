@@ -3,6 +3,6 @@
   "include": ["./src/**/*.ts"],
   "exclude": [],
   "compilerOptions": {
-    "types": ["jest", "@sounisi5011/jest-binary-data-matchers"]
+    "types": ["node"]
   }
 }

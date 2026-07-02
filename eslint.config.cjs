@@ -21,7 +21,7 @@ module.exports = tseslint.config(
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
-        project: true,
+        project: ["packages/*/tsconfig.eslint.json"],
       },
     },
   },
@@ -48,7 +48,7 @@ module.exports = tseslint.config(
     },
     languageOptions: {
       parserOptions: {
-        project: ["packages/xmlrpc/tsconfig.json", "packages/xmlrpc/tsconfig.dts.json"],
+        project: ["packages/xmlrpc/tsconfig.eslint.json", "packages/xmlrpc/tsconfig.dts.json"],
       },
     },
   },
@@ -64,7 +64,7 @@ module.exports = tseslint.config(
     files: ["packages/ros1/**"],
     languageOptions: {
       parserOptions: {
-        project: ["packages/ros1/tsconfig.json", "packages/ros1/tsconfig.dts.json"],
+        project: ["packages/ros1/tsconfig.eslint.json", "packages/ros1/tsconfig.dts.json"],
       },
     },
   },
