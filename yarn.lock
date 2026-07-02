@@ -848,7 +848,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxglove/rosmsg-msgs-common@npm:^3.0.0":
+"@foxglove/rosmsg-msgs-common@npm:^3.2.2":
   version: 3.2.3
   resolution: "@foxglove/rosmsg-msgs-common@npm:3.2.3"
   dependencies:
@@ -868,13 +868,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxglove/schemas@npm:^1.7.2":
-  version: 1.7.2
-  resolution: "@foxglove/schemas@npm:1.7.2"
+"@foxglove/schemas@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@foxglove/schemas@npm:2.1.0"
   dependencies:
-    "@foxglove/rosmsg-msgs-common": "npm:^3.0.0"
+    "@foxglove/rosmsg-msgs-common": "npm:^3.2.2"
     tslib: "npm:^2"
-  checksum: 10c0/e52b8ade3010bd7b4e65f44ea76b2bea2819253c21d9ecf2d74c3e67264af87cfe0fe71ffe8235881d37fba596d36e711e655526515a32932cc2ee73bb10c8fe
+  checksum: 10c0/678aed7499b280daa2ca0150c90aead686d998547900a7fa0c4531d716c85c6b90c200b700a9e07a6ce97369d84b626935f9733be194e8d7a8d207802a57984e
   languageName: node
   linkType: hard
 
@@ -1703,7 +1703,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/rosbag2@workspace:packages/rosbag2"
   dependencies:
-    "@foxglove/schemas": "npm:^1.7.2"
+    "@foxglove/schemas": "npm:^2.1.0"
     "@lichtblick/rosmsg-msgs-common": "workspace:^"
     "@lichtblick/rosmsg2-serialization": "workspace:^"
     "@lichtblick/rostime": "workspace:^"

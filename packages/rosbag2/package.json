@@ -45,7 +45,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@foxglove/schemas": "^1.7.2",
+    "@foxglove/schemas": "^2.1.0",
     "@lichtblick/rosmsg-msgs-common": "workspace:^",
     "@lichtblick/rosmsg2-serialization": "workspace:^",
     "@lichtblick/rostime": "workspace:^",
