@@ -125,7 +125,7 @@ export class RosNode extends EventEmitter<RosNodeEvents> {
   async start(port?: number): Promise<void> {
     return await this.rosFollower
       .start(this.hostname, port)
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+
       .then(() => this._log?.debug?.(`rosfollower listening at ${this.rosFollower.url()}`));
   }
 
@@ -342,7 +342,6 @@ export class RosNode extends EventEmitter<RosNodeEvents> {
     const didUnsubscribe = (value as number) === 1;
 
     this._log?.debug?.(
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       `unsubscribed ${callerApi} from param "${key}" (didUnsubscribe=${didUnsubscribe})`,
     );
     return didUnsubscribe;

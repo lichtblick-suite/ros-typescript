@@ -28,6 +28,12 @@ module.exports = tseslint.config(
     files: ["**/*.ts", "**/*.tsx"],
   })),
   {
+    files: ["**/*.ts", "**/*.tsx"],
+    rules: {
+      "@typescript-eslint/restrict-template-expressions": ["error", { allowNumber: true }],
+    },
+  },
+  {
     files: ["packages/ros1/**"],
     rules: {
       "@lichtblick/prefer-hash-private": "off",
@@ -46,6 +52,7 @@ module.exports = tseslint.config(
     },
     languageOptions: {
       parserOptions: {
+        projectService: false,
         project: ["packages/xmlrpc/tsconfig.json", "packages/xmlrpc/tsconfig.dts.json"],
       },
     },
@@ -62,6 +69,7 @@ module.exports = tseslint.config(
     files: ["packages/ros1/**"],
     languageOptions: {
       parserOptions: {
+        projectService: false,
         project: ["packages/ros1/tsconfig.json", "packages/ros1/tsconfig.dts.json"],
       },
     },
