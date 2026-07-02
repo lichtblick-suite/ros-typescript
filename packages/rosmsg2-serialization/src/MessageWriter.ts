@@ -111,7 +111,7 @@ export class MessageWriter {
    */
   public writeMessage(message: unknown, output?: Uint8Array): Uint8Array {
     const writer = new CdrWriter({
-      buffer: output,
+      buffer: output?.buffer as ArrayBuffer,
       size: output ? undefined : this.calculateByteSize(message),
     });
     this.#write(this.#rootDefinition, message, writer);

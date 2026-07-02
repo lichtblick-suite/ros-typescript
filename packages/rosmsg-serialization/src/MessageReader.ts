@@ -26,7 +26,7 @@ type TypedArray =
 
 interface TypedArrayConstructor {
   new (length?: number): TypedArray;
-  new (buffer: ArrayBuffer, byteOffset: number, length: number): TypedArray;
+  new (buffer: ArrayBufferLike, byteOffset: number, length: number): TypedArray;
   BYTES_PER_ELEMENT: number;
 }
 
