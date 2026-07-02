@@ -91,7 +91,7 @@ export class Subscription extends EventEmitter<SubscriptionEvents> {
     return Array.from(this._publishers.values()).map((pub): PublisherInfo => {
       return [
         pub.connectionId,
-        pub.publisherXmlRpcUrl().toString(),
+        pub.publisherXmlRpcUrl(),
         "i",
         pub.connection.transportType(),
         this.name,

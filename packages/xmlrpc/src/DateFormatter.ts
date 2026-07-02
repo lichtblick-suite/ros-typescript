@@ -29,7 +29,7 @@ export class DateFormatter {
    * @return {Date}       - Date object from timestamp.
    */
   decodeIso8601(time: string): Date {
-    const dateParts = DateFormatter.ISO8601.exec(time.toString());
+    const dateParts = DateFormatter.ISO8601.exec(time);
     if (dateParts == null) {
       throw new Error(`Expected a ISO8601 datetime but got "${time}"`);
     }

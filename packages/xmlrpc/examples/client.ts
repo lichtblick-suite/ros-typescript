@@ -5,8 +5,8 @@ async function main() {
   const b = parseInt(process.argv[3] ?? "2");
   const client = new XmlRpcClient(`http://localhost:8000`);
   const res = await client.methodCall("sum", [a, b]);
-  // workaround for https://github.com/typescript-eslint/typescript-eslint/issues/10632
-  console.log(`sum(${a}, ${b}) -> ${String(res as string)}`);
+  // eslint-disable-next-line @typescript-eslint/no-base-to-string
+  console.log(`sum(${a}, ${b}) -> ${String(res)}`);
 }
 
 void main();

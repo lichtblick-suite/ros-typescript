@@ -256,7 +256,8 @@ export class Deserializer {
     const struct: XmlRpcStruct = {};
     const items = this._stack.slice(mark);
     for (let i = 0; i < items.length; i += 2) {
-      const key = String(items[i] as string); // workaround for https://github.com/typescript-eslint/typescript-eslint/issues/10632
+      // eslint-disable-next-line @typescript-eslint/no-base-to-string
+      const key = String(items[i]);
       struct[key] = items[i + 1];
     }
     this._stack.splice(mark, this._stack.length - mark, struct);

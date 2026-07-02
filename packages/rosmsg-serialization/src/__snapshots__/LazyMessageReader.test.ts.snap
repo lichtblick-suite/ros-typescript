@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LazyReader should deserialize CustomType custom
     ============
@@ -7,6 +7,158 @@ exports[`LazyReader should deserialize CustomType custom
     ============
     MSG: custom_type/CustomType
     uint8 first 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class custom_type_CustomType {
+    static __first$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // uint8 first
+      totalSize += 1;
+      offset += 1;
+
+      return totalSize;
+    }
+
+    __first$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of custom_type_CustomType from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new custom_type_CustomType(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/CustomType"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/CustomType"))(reader);
+    }
+
+    get first() {
+      const offset = this.__first$offset(this.#view, this.#offset);
+      return deserializers.uint8(this.#view, offset);
+    }
+  }
+
+  class __RootMsg {
+    static __custom$size(view /* dataview */, offset) {
+      return custom_type_CustomType.size(view, offset);
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // custom_type/CustomType custom
+      {
+        const size = __RootMsg.__custom$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      return totalSize;
+    }
+
+    __custom$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    get custom() {
+      const offset = this.__custom$offset(this.#view, this.#offset);
+      return custom_type_CustomType.build(this.#view, offset);
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
+exports[`LazyReader should deserialize CustomType custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first: CustomType custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -564,6 +716,394 @@ exports[`LazyReader should deserialize CustomType[] custom
 "
 `;
 
+exports[`LazyReader should deserialize CustomType[] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    MoreCustom another\\n    ============\\n    MSG: custom_type/MoreCustom\\n    uint8 field: CustomType[] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    MoreCustom another\\n    ============\\n    MSG: custom_type/MoreCustom\\n    uint8 field 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class custom_type_MoreCustom {
+    static __field$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // uint8 field
+      totalSize += 1;
+      offset += 1;
+
+      return totalSize;
+    }
+
+    __field$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of custom_type_MoreCustom from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new custom_type_MoreCustom(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/MoreCustom"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/MoreCustom"))(reader);
+    }
+
+    get field() {
+      const offset = this.__field$offset(this.#view, this.#offset);
+      return deserializers.uint8(this.#view, offset);
+    }
+  }
+
+  class custom_type_CustomType {
+    static __another$size(view /* dataview */, offset) {
+      return custom_type_MoreCustom.size(view, offset);
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // custom_type/MoreCustom another
+      {
+        const size = custom_type_CustomType.__another$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      return totalSize;
+    }
+
+    __another$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of custom_type_CustomType from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new custom_type_CustomType(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/CustomType"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/CustomType"))(reader);
+    }
+
+    get another() {
+      const offset = this.__another$offset(this.#view, this.#offset);
+      return custom_type_MoreCustom.build(this.#view, offset);
+    }
+  }
+
+  class __RootMsg {
+    static __custom$size(view /* dataview */, offset) {
+      return builtinSizes.array(view, offset, custom_type_CustomType.size);
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // custom_type/CustomType custom
+      {
+        const size = __RootMsg.__custom$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      return totalSize;
+    }
+
+    __custom$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // custom_type/CustomType[] custom
+    get custom() {
+      const offset = this.__custom$offset(this.#view, this.#offset);
+      return deserializers.dynamicArray(
+        this.#view,
+        offset,
+        custom_type_CustomType.build,
+        custom_type_CustomType.size,
+      );
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
+exports[`LazyReader should deserialize CustomType[] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first: CustomType[] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class custom_type_CustomType {
+    static __first$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // uint8 first
+      totalSize += 1;
+      offset += 1;
+
+      return totalSize;
+    }
+
+    __first$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of custom_type_CustomType from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new custom_type_CustomType(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/CustomType"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/CustomType"))(reader);
+    }
+
+    get first() {
+      const offset = this.__first$offset(this.#view, this.#offset);
+      return deserializers.uint8(this.#view, offset);
+    }
+  }
+
+  class __RootMsg {
+    static __custom$size(view /* dataview */, offset) {
+      return builtinSizes.array(view, offset, custom_type_CustomType.size);
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // custom_type/CustomType custom
+      {
+        const size = __RootMsg.__custom$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      return totalSize;
+    }
+
+    __custom$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // custom_type/CustomType[] custom
+    get custom() {
+      const offset = this.__custom$offset(this.#view, this.#offset);
+      return deserializers.dynamicArray(
+        this.#view,
+        offset,
+        custom_type_CustomType.build,
+        custom_type_CustomType.size,
+      );
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
 exports[`LazyReader should deserialize CustomType[3] custom
     ============
     MSG: custom_type/CustomType
@@ -571,6 +1111,170 @@ exports[`LazyReader should deserialize CustomType[3] custom
     ============
     MSG: custom_type/CustomType
     uint8 first 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class custom_type_CustomType {
+    static __first$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // uint8 first
+      totalSize += 1;
+      offset += 1;
+
+      return totalSize;
+    }
+
+    __first$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of custom_type_CustomType from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new custom_type_CustomType(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/CustomType"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("custom_type/CustomType"))(reader);
+    }
+
+    get first() {
+      const offset = this.__first$offset(this.#view, this.#offset);
+      return deserializers.uint8(this.#view, offset);
+    }
+  }
+
+  class __RootMsg {
+    static __custom$size(view /* dataview */, offset) {
+      return builtinSizes.fixedArray(
+        view,
+        offset,
+        3,
+        custom_type_CustomType.size,
+      );
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // custom_type/CustomType custom
+      {
+        const size = __RootMsg.__custom$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      return totalSize;
+    }
+
+    __custom$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // custom_type/CustomType[3] custom
+    get custom() {
+      const offset = this.__custom$offset(this.#view, this.#offset);
+      return deserializers.fixedArray(
+        this.#view,
+        offset,
+        3,
+        custom_type_CustomType.build,
+        custom_type_CustomType.size,
+      );
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
+exports[`LazyReader should deserialize CustomType[3] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first: CustomType[3] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -1345,6 +2049,122 @@ float32[] second 1`] = `
 "
 `;
 
+exports[`LazyReader should deserialize float32[] first\\nfloat32[] second: float32[] first\\nfloat32[] second 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class __RootMsg {
+    static __first$size(view /* dataview */, offset) {
+      const len = view.getUint32(offset, true);
+      return 4 + len * 4;
+    }
+
+    static __second$size(view /* dataview */, offset) {
+      const len = view.getUint32(offset, true);
+      return 4 + len * 4;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // float32 first
+      {
+        const size = __RootMsg.__first$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      // float32 second
+      {
+        const size = __RootMsg.__second$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      return totalSize;
+    }
+
+    __first$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    __second$offset(view, initOffset) {
+      if (this.#_second_offset_cache) {
+        return this.#_second_offset_cache;
+      }
+      const prevOffset = this.__first$offset(view, initOffset);
+      const totalOffset = prevOffset + __RootMsg.__first$size(view, prevOffset);
+      this.#_second_offset_cache = totalOffset;
+      return totalOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+    #_second_offset_cache = undefined;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // float32[] first
+    get first() {
+      const offset = this.__first$offset(this.#view, this.#offset);
+      const len = this.#view.getUint32(offset, true);
+      return deserializers.float32Array(this.#view, offset + 4, len);
+    }
+
+    // float32[] second
+    get second() {
+      const offset = this.__second$offset(this.#view, this.#offset);
+      const len = this.#view.getUint32(offset, true);
+      return deserializers.float32Array(this.#view, offset + 4, len);
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
 exports[`LazyReader should deserialize float32[2] arr: float32[2] arr 1`] = `
 "function anonymous(
   deserializers,
@@ -1590,9 +2410,192 @@ exports[`LazyReader should deserialize int8 STATUS_ONE = 1
 "
 `;
 
+exports[`LazyReader should deserialize int8 STATUS_ONE = 1\\n       int8 STATUS_TWO = 2\\n       int8 status: int8 STATUS_ONE = 1\\n       int8 STATUS_TWO = 2\\n       int8 status 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class __RootMsg {
+    static __status$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // int8 status
+      totalSize += 1;
+      offset += 1;
+
+      return totalSize;
+    }
+
+    __status$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    get status() {
+      const offset = this.__status$offset(this.#view, this.#offset);
+      return deserializers.int8(this.#view, offset);
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
 exports[`LazyReader should deserialize int8 first
 int8 second: int8 first
 int8 second 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class __RootMsg {
+    static __first$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    static __second$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // int8 first
+      totalSize += 1;
+      offset += 1;
+
+      // int8 second
+      totalSize += 1;
+      offset += 1;
+
+      return totalSize;
+    }
+
+    __first$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    __second$offset(view, initOffset) {
+      if (this.#_second_offset_cache) {
+        return this.#_second_offset_cache;
+      }
+      const prevOffset = this.__first$offset(view, initOffset);
+      const totalOffset = prevOffset + __RootMsg.__first$size(view, prevOffset);
+      this.#_second_offset_cache = totalOffset;
+      return totalOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+    #_second_offset_cache = undefined;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    get first() {
+      const offset = this.__first$offset(this.#view, this.#offset);
+      return deserializers.int8(this.#view, offset);
+    }
+    get second() {
+      const offset = this.__second$offset(this.#view, this.#offset);
+      return deserializers.int8(this.#view, offset);
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
+exports[`LazyReader should deserialize int8 first\\nint8 second: int8 first\\nint8 second 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -2591,6 +3594,112 @@ exports[`LazyReader should deserialize int64 sample # lowest: int64 sample # low
 exports[`LazyReader should deserialize string first
 int8 second: string first
 int8 second 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class __RootMsg {
+    static __first$size(view /* dataview */, offset) {
+      return builtinSizes.string(view, offset);
+    }
+
+    static __second$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // string first
+      {
+        const size = __RootMsg.__first$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      // int8 second
+      totalSize += 1;
+      offset += 1;
+
+      return totalSize;
+    }
+
+    __first$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    __second$offset(view, initOffset) {
+      if (this.#_second_offset_cache) {
+        return this.#_second_offset_cache;
+      }
+      const prevOffset = this.__first$offset(view, initOffset);
+      const totalOffset = prevOffset + __RootMsg.__first$size(view, prevOffset);
+      this.#_second_offset_cache = totalOffset;
+      return totalOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+    #_second_offset_cache = undefined;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    get first() {
+      const offset = this.__first$offset(this.#view, this.#offset);
+      return deserializers.string(this.#view, offset);
+    }
+    get second() {
+      const offset = this.__second$offset(this.#view, this.#offset);
+      return deserializers.int8(this.#view, offset);
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
+exports[`LazyReader should deserialize string first\\nint8 second: string first\\nint8 second 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -3785,6 +4894,441 @@ int32[] arr 1`] = `
 exports[`LazyReader should deserialize uint8 blank
 time[] arr: uint8 blank
 time[] arr 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class __RootMsg {
+    static __blank$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    static __arr$size(view /* dataview */, offset) {
+      const len = view.getUint32(offset, true);
+      return 4 + len * 8;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // uint8 blank
+      totalSize += 1;
+      offset += 1;
+
+      // time arr
+      {
+        const size = __RootMsg.__arr$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      return totalSize;
+    }
+
+    __blank$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    __arr$offset(view, initOffset) {
+      if (this.#_arr_offset_cache) {
+        return this.#_arr_offset_cache;
+      }
+      const prevOffset = this.__blank$offset(view, initOffset);
+      const totalOffset = prevOffset + __RootMsg.__blank$size(view, prevOffset);
+      this.#_arr_offset_cache = totalOffset;
+      return totalOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+    #_arr_offset_cache = undefined;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    get blank() {
+      const offset = this.__blank$offset(this.#view, this.#offset);
+      return deserializers.uint8(this.#view, offset);
+    }
+
+    // time[] arr
+    get arr() {
+      const offset = this.__arr$offset(this.#view, this.#offset);
+      const len = this.#view.getUint32(offset, true);
+      return deserializers.timeArray(this.#view, offset + 4, len);
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
+exports[`LazyReader should deserialize uint8 blank\\nfloat32[] arr: uint8 blank\\nfloat32[] arr 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class __RootMsg {
+    static __blank$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    static __arr$size(view /* dataview */, offset) {
+      const len = view.getUint32(offset, true);
+      return 4 + len * 4;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // uint8 blank
+      totalSize += 1;
+      offset += 1;
+
+      // float32 arr
+      {
+        const size = __RootMsg.__arr$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      return totalSize;
+    }
+
+    __blank$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    __arr$offset(view, initOffset) {
+      if (this.#_arr_offset_cache) {
+        return this.#_arr_offset_cache;
+      }
+      const prevOffset = this.__blank$offset(view, initOffset);
+      const totalOffset = prevOffset + __RootMsg.__blank$size(view, prevOffset);
+      this.#_arr_offset_cache = totalOffset;
+      return totalOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+    #_arr_offset_cache = undefined;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    get blank() {
+      const offset = this.__blank$offset(this.#view, this.#offset);
+      return deserializers.uint8(this.#view, offset);
+    }
+
+    // float32[] arr
+    get arr() {
+      const offset = this.__arr$offset(this.#view, this.#offset);
+      const len = this.#view.getUint32(offset, true);
+      return deserializers.float32Array(this.#view, offset + 4, len);
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
+exports[`LazyReader should deserialize uint8 blank\\nfloat32[2] arr: uint8 blank\\nfloat32[2] arr 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class __RootMsg {
+    static __blank$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    static __arr$size(view /* dataview */, offset) {
+      return 4 * 2;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // uint8 blank
+      totalSize += 1;
+      offset += 1;
+
+      // float32[2] arr
+      totalSize += 8;
+      offset += 8;
+
+      return totalSize;
+    }
+
+    __blank$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    __arr$offset(view, initOffset) {
+      if (this.#_arr_offset_cache) {
+        return this.#_arr_offset_cache;
+      }
+      const prevOffset = this.__blank$offset(view, initOffset);
+      const totalOffset = prevOffset + __RootMsg.__blank$size(view, prevOffset);
+      this.#_arr_offset_cache = totalOffset;
+      return totalOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+    #_arr_offset_cache = undefined;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    get blank() {
+      const offset = this.__blank$offset(this.#view, this.#offset);
+      return deserializers.uint8(this.#view, offset);
+    }
+
+    // float32[2] arr
+    get arr() {
+      const offset = this.__arr$offset(this.#view, this.#offset);
+      return deserializers.float32Array(this.#view, offset, 2);
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
+exports[`LazyReader should deserialize uint8 blank\\nint32[] arr: uint8 blank\\nint32[] arr 1`] = `
+"function anonymous(
+  deserializers,
+  builtinSizes,
+  typeReaders,
+  StandardTypeReader,
+) {
+  class __RootMsg {
+    static __blank$size(view /* dataview */, offset) {
+      return 1;
+    }
+
+    static __arr$size(view /* dataview */, offset) {
+      const len = view.getUint32(offset, true);
+      return 4 + len * 4;
+    }
+
+    // return the total serialized size of the message in the view
+    static size(view /* DataView */, initOffset = 0) {
+      let totalSize = 0;
+      let offset = initOffset;
+
+      // uint8 blank
+      totalSize += 1;
+      offset += 1;
+
+      // int32 arr
+      {
+        const size = __RootMsg.__arr$size(view, offset);
+        totalSize += size;
+        offset += size;
+      }
+
+      return totalSize;
+    }
+
+    __blank$offset(view, initOffset) {
+      return initOffset;
+    }
+
+    __arr$offset(view, initOffset) {
+      if (this.#_arr_offset_cache) {
+        return this.#_arr_offset_cache;
+      }
+      const prevOffset = this.__blank$offset(view, initOffset);
+      const totalOffset = prevOffset + __RootMsg.__blank$size(view, prevOffset);
+      this.#_arr_offset_cache = totalOffset;
+      return totalOffset;
+    }
+
+    // return an instance of __RootMsg from the view at initOffset bytes into the view
+    // NOTE: the underlying view data lifetime must be at least the lifetime of the instance
+    static build(view /* DataView */, offset = 0) {
+      return new __RootMsg(view, offset);
+    }
+
+    #view = undefined;
+    #offset;
+    #_arr_offset_cache = undefined;
+
+    constructor(view, offset = 0) {
+      this.#view = view;
+      this.#offset = offset;
+    }
+
+    // return a json object of the fields
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toJSON() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    // return a plain javascript object of the message
+    // This fully deserializes all fields of the message into native types
+    // Typed arrays are considered native types and remain as typed arrays
+    toObject() {
+      const view = this.#view;
+      const buffer = new Uint8Array(
+        view.buffer,
+        view.byteOffset + this.#offset,
+        view.byteLength - this.#offset,
+      );
+      const reader = new StandardTypeReader(buffer);
+      return new (typeReaders.get("__RootMsg"))(reader);
+    }
+
+    get blank() {
+      const offset = this.__blank$offset(this.#view, this.#offset);
+      return deserializers.uint8(this.#view, offset);
+    }
+
+    // int32[] arr
+    get arr() {
+      const offset = this.__arr$offset(this.#view, this.#offset);
+      const len = this.#view.getUint32(offset, true);
+      return deserializers.int32Array(this.#view, offset + 4, len);
+    }
+  }
+  return __RootMsg;
+}
+"
+`;
+
+exports[`LazyReader should deserialize uint8 blank\\ntime[] arr: uint8 blank\\ntime[] arr 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
