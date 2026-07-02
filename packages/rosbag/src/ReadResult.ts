@@ -24,7 +24,7 @@ export default class ReadResult<T> {
     data: Uint8Array,
     chunkOffset: number,
     totalChunks: number,
-    // eslint-disable-next-line @foxglove/no-boolean-parameters
+    // eslint-disable-next-line @lichtblick/no-boolean-parameters
     freeze?: boolean,
   ) {
     // string: the topic the message was on

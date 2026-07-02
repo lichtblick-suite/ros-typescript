@@ -1,4 +1,4 @@
-import { parse } from "@foxglove/rosmsg";
+import { parse } from "@lichtblick/rosmsg";
 import benny from "benny";
 
 import { Testcase, testCases } from "./testCases";

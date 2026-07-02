@@ -1,4 +1,4 @@
-import { MessageDefinition } from "@foxglove/message-definition";
+import { MessageDefinition } from "@lichtblick/message-definition";
 import { Md5 } from "md5-typescript";
 
 const BUILTIN_TYPES = new Set([

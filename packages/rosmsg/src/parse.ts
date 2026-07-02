@@ -11,7 +11,7 @@ import {
   MessageDefinition,
   MessageDefinitionField,
   isMsgDefEqual,
-} from "@foxglove/message-definition";
+} from "@lichtblick/message-definition";
 import { Grammar, Parser } from "nearley";
 
 import { buildRos2Type } from "./buildRos2Type";

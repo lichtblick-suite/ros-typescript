@@ -28,7 +28,7 @@ type TopicRow = {
 
 export class SqliteNodejs implements SqliteDb {
   public readonly filename: string;
-  // eslint-disable-next-line @foxglove/prefer-hash-private
+  // eslint-disable-next-line @lichtblick/prefer-hash-private
   private context?: DbContext;
 
   public constructor(filename: string) {

@@ -1,4 +1,4 @@
-const lichtblick = require("@lichtblick/eslint-plugin");
+const lichtblick = require("@lichtblick/eslint-plugin").default;
 const globals = require("globals");
 const tseslint = require("typescript-eslint");
 
@@ -78,6 +78,7 @@ module.exports = tseslint.config(
     files: ["packages/rosmsg-serialization/**"],
     languageOptions: {
       parserOptions: {
+        projectService: false,
         project: "packages/rosmsg-serialization/tsconfig.eslint.json",
       },
     },
@@ -86,6 +87,7 @@ module.exports = tseslint.config(
     files: ["packages/rosmsg2-serialization/**"],
     languageOptions: {
       parserOptions: {
+        projectService: false,
         project: "packages/rosmsg2-serialization/tsconfig.eslint.json",
       },
     },

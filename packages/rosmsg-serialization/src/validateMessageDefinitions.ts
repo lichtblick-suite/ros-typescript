@@ -1,4 +1,4 @@
-import type { MessageDefinition } from "@foxglove/message-definition";
+import type { MessageDefinition } from "@lichtblick/message-definition";
 
 const ROS_FIELD_NAME_PATTERN = /^[A-Za-z][A-Za-z0-9_]*$/;
 

@@ -1,4 +1,4 @@
-import { MessageDefinition } from "@foxglove/message-definition";
+import { MessageDefinition } from "@lichtblick/message-definition";
 
 import buildReader from "./buildReader";
 

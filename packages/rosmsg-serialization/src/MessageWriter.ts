@@ -7,7 +7,7 @@
 //   found at http://www.apache.org/licenses/LICENSE-2.0
 //   You may not use this file except in compliance with the License.
 
-import { MessageDefinition, MessageDefinitionField } from "@foxglove/message-definition";
+import { MessageDefinition, MessageDefinitionField } from "@lichtblick/message-definition";
 
 import { stringLengthUtf8 } from "./stringLengthUtf8";
 import { validateMessageDefinitionsForCodegen } from "./validateMessageDefinitions";
@@ -145,7 +145,7 @@ class StandardTypeWriter {
     }
   }
 
-  // eslint-disable-next-line @foxglove/no-boolean-parameters
+  // eslint-disable-next-line @lichtblick/no-boolean-parameters
   bool(value: boolean): void {
     this.uint8(value ? 1 : 0);
   }

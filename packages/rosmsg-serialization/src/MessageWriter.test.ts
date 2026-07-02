@@ -7,8 +7,8 @@
 //   found at http://www.apache.org/licenses/LICENSE-2.0
 //   You may not use this file except in compliance with the License.
 
-import type { MessageDefinition } from "@foxglove/message-definition";
-import { parse as parseMessageDefinition } from "@foxglove/rosmsg";
+import type { MessageDefinition } from "@lichtblick/message-definition";
+import { parse as parseMessageDefinition } from "@lichtblick/rosmsg";
 
 import { MessageReader } from "./MessageReader";
 import { MessageWriter } from "./MessageWriter";
