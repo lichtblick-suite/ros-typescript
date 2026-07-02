@@ -57,7 +57,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@foxglove/message-definition": "0.5.0",
+    "@lichtblick/message-definition": "1.0.0",
     "@lichtblick/rosmsg": "workspace:^",
     "@lichtblick/rosmsg-serialization": "workspace:^",
     "@lichtblick/xmlrpc": "workspace:^",

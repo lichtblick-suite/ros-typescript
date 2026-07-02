@@ -808,7 +808,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.33.0, @eslint/js@npm:^9":
+"@eslint/js@npm:9.33.0":
   version: 9.33.0
   resolution: "@eslint/js@npm:9.33.0"
   checksum: 10c0/4c42c9abde76a183b8e47205fd6c3116b058f82f07b6ad4de40de56cdb30a36e9ecd40efbea1b63a84d08c206aadbb0aa39a890197e1ad6455a8e542df98f186
@@ -836,29 +836,6 @@ __metadata:
   version: 3.5.1
   resolution: "@foxglove/cdr@npm:3.5.1"
   checksum: 10c0/eadd02f48551b360c040624eb7e9e501840937618e338c2e560a5b0676a7f08f419c3794ec90bbfac7a6675b411e2a4241e9aee4b1a9febafc1d446af892060b
-  languageName: node
-  linkType: hard
-
-"@foxglove/eslint-plugin@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@foxglove/eslint-plugin@npm:2.1.0"
-  dependencies:
-    "@eslint/compat": "npm:^1"
-    "@eslint/js": "npm:^9"
-    "@typescript-eslint/utils": "npm:^8"
-    eslint-config-prettier: "npm:^9"
-    eslint-plugin-es: "npm:^4"
-    eslint-plugin-filenames: "npm:^1"
-    eslint-plugin-import: "npm:^2"
-    eslint-plugin-jest: "npm:^28"
-    eslint-plugin-prettier: "npm:^5"
-    eslint-plugin-react: "npm:^7"
-    eslint-plugin-react-hooks: "npm:^5"
-    tsutils: "npm:^3"
-    typescript-eslint: "npm:^8"
-  peerDependencies:
-    eslint: ^9.27.0
-  checksum: 10c0/f6a8645947748b38081c199f6da64e07a59ff73ceec2a132801424c1f0328809f30c503ddea6334bb093eafb062f1335f8603ffd7a8e44ccf54246daebefeb24
   languageName: node
   linkType: hard
 
@@ -1644,7 +1621,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lichtblick/message-definition@npm:^1.0.0":
+"@lichtblick/eslint-plugin@npm:^2.0.7":
+  version: 2.0.7
+  resolution: "@lichtblick/eslint-plugin@npm:2.0.7"
+  dependencies:
+    "@eslint/compat": "npm:^1"
+    eslint-config-prettier: "npm:^9"
+    eslint-plugin-es: "npm:^4"
+    eslint-plugin-filenames: "npm:^1"
+    eslint-plugin-import: "npm:^2"
+    eslint-plugin-jest: "npm:^28"
+    eslint-plugin-prettier: "npm:^5"
+    eslint-plugin-react: "npm:^7"
+    eslint-plugin-react-hooks: "npm:^5"
+    tsutils: "npm:^3"
+    typescript: "npm:^4 || ^5"
+    typescript-eslint: "npm:^8"
+  peerDependencies:
+    eslint: ^9.38.0
+    eslint-config-prettier: ^8 || ^9
+    prettier: ^3
+    typescript: ^4 || ^5
+  checksum: 10c0/053dfc1ec31bd429a9d9753dc3ae96e6fd1addf4b9d94067f7055d88841565133cbd43c6fb3ac4a238b3352d459de52f5335fc43adb885b6f0f6d01f5730d468
+  languageName: node
+  linkType: hard
+
+"@lichtblick/message-definition@npm:1.0.0, @lichtblick/message-definition@npm:^1.0.0":
   version: 1.0.0
   resolution: "@lichtblick/message-definition@npm:1.0.0"
   checksum: 10c0/dfa65765f29cad4ed18e3fc28b88db251df3d58921ad94aebe41282e961cfbd6916c776cee960af37e31b03054b17731a8f773d21f7bde33bcfacb4639b95c03
@@ -1655,7 +1657,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/ros1@workspace:packages/ros1"
   dependencies:
-    "@foxglove/message-definition": "npm:0.5.0"
+    "@lichtblick/message-definition": "npm:1.0.0"
     "@lichtblick/rosmsg": "workspace:^"
     "@lichtblick/rosmsg-serialization": "workspace:^"
     "@lichtblick/xmlrpc": "workspace:^"
@@ -2473,7 +2475,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.38.0, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/utils@npm:^8":
+"@typescript-eslint/utils@npm:8.38.0, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0":
   version: 8.38.0
   resolution: "@typescript-eslint/utils@npm:8.38.0"
   dependencies:
@@ -8340,8 +8342,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@foxglove/eslint-plugin": "npm:^2.1.0"
     "@foxglove/tsconfig": "npm:^3.1.0"
+    "@lichtblick/eslint-plugin": "npm:^2.0.7"
     "@types/jest": "npm:^30.0.0"
     eslint: "npm:^9.31.0"
     eslint-plugin-file-progress: "npm:^3.0.2"
@@ -9408,6 +9410,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:^4 || ^5":
+  version: 5.9.3
+  resolution: "typescript@npm:5.9.3"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/6bd7552ce39f97e711db5aa048f6f9995b53f1c52f7d8667c1abdc1700c68a76a308f579cd309ce6b53646deb4e9a1be7c813a93baaf0a28ccd536a30270e1c5
+  languageName: node
+  linkType: hard
+
 "typescript@npm:^5.8.3":
   version: 5.8.3
   resolution: "typescript@npm:5.8.3"
@@ -9415,6 +9427,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/5f8bb01196e542e64d44db3d16ee0e4063ce4f3e3966df6005f2588e86d91c03e1fb131c2581baf0fb65ee79669eea6e161cd448178986587e9f6844446dbb48
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^4 || ^5#optional!builtin<compat/typescript>":
+  version: 5.9.3
+  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/ad09fdf7a756814dce65bc60c1657b40d44451346858eea230e10f2e95a289d9183b6e32e5c11e95acc0ccc214b4f36289dcad4bf1886b0adb84d711d336a430
   languageName: node
   linkType: hard
 

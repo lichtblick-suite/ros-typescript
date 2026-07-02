@@ -1,6 +1,4 @@
-// @ts-check
-
-const foxglove = require("@foxglove/eslint-plugin");
+const lichtblick = require("@lichtblick/eslint-plugin");
 const globals = require("globals");
 const tseslint = require("typescript-eslint");
 
@@ -8,8 +6,8 @@ module.exports = tseslint.config(
   {
     ignores: ["**/dist", "packages/rosbag/docs"],
   },
-  ...foxglove.configs.base,
-  ...foxglove.configs.jest,
+  ...lichtblick.configs.base,
+  ...lichtblick.configs.jest,
   {
     languageOptions: {
       globals: {
@@ -25,26 +23,26 @@ module.exports = tseslint.config(
       },
     },
   },
-  ...foxglove.configs.typescript.map((config) => ({
+  ...lichtblick.configs.typescript.map((config) => ({
     ...config,
     files: ["**/*.ts", "**/*.tsx"],
   })),
   {
     files: ["packages/ros1/**"],
     rules: {
-      "@foxglove/prefer-hash-private": "off",
+      "@lichtblick/prefer-hash-private": "off",
     },
   },
   {
     files: ["packages/rosbag/**"],
     rules: {
-      "@foxglove/prefer-hash-private": "off",
+      "@lichtblick/prefer-hash-private": "off",
     },
   },
   {
     files: ["packages/xmlrpc/**"],
     rules: {
-      "@foxglove/prefer-hash-private": "off",
+      "@lichtblick/prefer-hash-private": "off",
     },
     languageOptions: {
       parserOptions: {
