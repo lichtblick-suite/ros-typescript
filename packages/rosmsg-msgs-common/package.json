@@ -39,7 +39,7 @@
     "prepack": "yarn build",
     "test:commonjs": "node -e \"require('./dist/index.js')\"",
     "test:esm": "test/testEsmImport.sh",
-    "test:types": "tsc --noEmit ./dist/index.d.ts",
+    "test:types": "tsc --noEmit --ignoreConfig ./dist/index.d.ts",
     "test": "yarn test:commonjs && yarn test:esm && yarn test:types"
   },
   "devDependencies": {
