@@ -37,7 +37,7 @@ export class MockTcpSocket extends EventEmitter<TcpSocketEvents> implements TcpS
     // no-op
   }
 
-  // eslint-disable-next-line @foxglove/no-boolean-parameters
+  // eslint-disable-next-line @lichtblick/no-boolean-parameters
   async setNoDelay(_noDelay?: boolean): Promise<void> {
     // no-op
   }

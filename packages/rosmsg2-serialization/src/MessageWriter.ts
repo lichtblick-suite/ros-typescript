@@ -1,9 +1,9 @@
-import { CdrWriter } from "@foxglove/cdr";
+import { CdrWriter } from "@lichtblick/cdr";
 import {
   DefaultValue,
   MessageDefinition,
   MessageDefinitionField,
-} from "@foxglove/message-definition";
+} from "@lichtblick/message-definition";
 
 import { messageDefinitionHasDataFields } from "./messageDefinitionHasDataFields";
 import { stringLengthUtf8 } from "./stringLengthUtf8";

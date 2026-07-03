@@ -1,7 +1,7 @@
 {
   "name": "xmlrpc-examples",
   "version": "0.0.0",
-  "description": "@foxglove/xmlrpc example code",
+  "description": "@lichtblick/xmlrpc example code",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "server": "ts-node server.ts"
   },
   "dependencies": {
-    "@foxglove/xmlrpc": "portal:../"
+    "@lichtblick/xmlrpc": "portal:../"
   },
   "devDependencies": {
     "@types/node": "^24.0.8",

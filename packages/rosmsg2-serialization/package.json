@@ -42,7 +42,7 @@
     "node": ">= 20"
   },
   "devDependencies": {
-    "@foxglove/ros2idl-parser": "^0.3.6",
+    "@lichtblick/ros2idl-parser": "^1.0.0",
     "@lichtblick/rosmsg": "workspace:*",
     "@sounisi5011/jest-binary-data-matchers": "^1.2.1",
     "@types/jest": "^30.0.0",
@@ -52,8 +52,8 @@
     "typescript": "6.0.3"
   },
   "dependencies": {
-    "@foxglove/cdr": "^3.5.1",
-    "@foxglove/message-definition": "0.5.0",
+    "@lichtblick/cdr": "^1.0.1",
+    "@lichtblick/message-definition": "1.0.0",
     "@lichtblick/rostime": "workspace:^"
   },
   "packageManager": "yarn@4.5.3"

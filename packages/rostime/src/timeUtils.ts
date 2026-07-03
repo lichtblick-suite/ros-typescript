@@ -35,7 +35,7 @@ export function isTime(obj?: unknown): obj is Time {
  * @param allowNegative Allow negative times to be converted
  * @returns String timestamp containing a floating point number of seconds
  */
-// eslint-disable-next-line @foxglove/no-boolean-parameters
+// eslint-disable-next-line @lichtblick/no-boolean-parameters
 export function toString(stamp: Time, allowNegative = false): string {
   if (!allowNegative && (stamp.sec < 0 || stamp.nsec < 0)) {
     throw new Error(`Invalid negative time { sec: ${stamp.sec}, nsec: ${stamp.nsec} }`);
@@ -205,7 +205,7 @@ export function interpolate(start: Time, end: Time, fraction: number): Time {
  * @param allowNegative Allow negative times to be normalized
  * @returns A normalized Time
  */
-// eslint-disable-next-line @foxglove/no-boolean-parameters
+// eslint-disable-next-line @lichtblick/no-boolean-parameters
 export function fixTime(t: Time, allowNegative = false): Time {
   const durationNanos = t.nsec;
   const secsFromNanos = Math.floor(durationNanos / 1e9);
@@ -304,7 +304,7 @@ export function fromNanoSec(nsec: bigint): Time {
  * @param roundUp Round up to nearest millisecond if true, otherwise round down. Defaults to true
  * @returns Integer number of milliseconds
  */
-// eslint-disable-next-line @foxglove/no-boolean-parameters
+// eslint-disable-next-line @lichtblick/no-boolean-parameters
 export function toMillis(time: Time, roundUp = true): number {
   const secondsMillis = time.sec * 1e3;
   const nsecMillis = time.nsec / 1e6;

@@ -7,9 +7,9 @@ type MessageDecoder = (rawMessage: RawMessage) => unknown;
  * asynchronous iterator.
  */
 export class MessageIterator implements AsyncIterableIterator<Message> {
-  // eslint-disable-next-line @foxglove/prefer-hash-private
+  // eslint-disable-next-line @lichtblick/prefer-hash-private
   private rowIterators: AsyncIterableIterator<RawMessage>[];
-  // eslint-disable-next-line @foxglove/prefer-hash-private
+  // eslint-disable-next-line @lichtblick/prefer-hash-private
   private decoder?: MessageDecoder;
 
   public constructor(rowIterators: AsyncIterableIterator<RawMessage>[], decoder?: MessageDecoder) {

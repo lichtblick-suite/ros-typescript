@@ -1,4 +1,4 @@
-import { HttpServer, XmlRpcServer, XmlRpcValue } from "@foxglove/xmlrpc";
+import { HttpServer, XmlRpcServer, XmlRpcValue } from "@lichtblick/xmlrpc";
 
 import { LoggerService } from "./LoggerService";
 import { RosFollowerClient } from "./RosFollowerClient";
@@ -44,7 +44,7 @@ export class RosMaster {
 
   async start(hostname: string, port?: number): Promise<void> {
     await this._server.listen(port, undefined, 10);
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+
     this._url = `http://${hostname}:${this._server.port()}/`;
 
     this._server.setHandler("registerService", this.registerService);

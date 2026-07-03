@@ -1,5 +1,5 @@
-import type { MessageDefinition } from "@foxglove/message-definition";
-import { parse as parseMessageDefinition } from "@foxglove/rosmsg";
+import type { MessageDefinition } from "@lichtblick/message-definition";
+import { parse as parseMessageDefinition } from "@lichtblick/rosmsg";
 import * as prettier from "prettier";
 
 import { LazyMessageReader } from "./LazyMessageReader";

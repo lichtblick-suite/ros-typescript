@@ -1,5 +1,5 @@
-import { CdrReader } from "@foxglove/cdr";
-import { MessageDefinition, MessageDefinitionField } from "@foxglove/message-definition";
+import { CdrReader } from "@lichtblick/cdr";
+import { MessageDefinition, MessageDefinitionField } from "@lichtblick/message-definition";
 import { Time as Ros1Time } from "@lichtblick/rostime";
 
 import { messageDefinitionHasDataFields } from "./messageDefinitionHasDataFields";
@@ -33,7 +33,7 @@ export type MessageReaderOptions = {
   /**
    * Select the type for deserialized `time` and `duration` values. "sec" and "nanosec" are used by
    * default in ROS 2, whereas "sec" and "nsec" originates from ROS 1 and matches
-   * `@foxglove/rostime`.
+   * `@lichtblick/rostime`.
    *
    * @default "sec,nanosec"
    */

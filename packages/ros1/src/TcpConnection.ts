@@ -1,5 +1,5 @@
-import { MessageDefinition } from "@foxglove/message-definition";
-import { parse as parseMessageDefinition } from "@foxglove/rosmsg";
+import { MessageDefinition } from "@lichtblick/message-definition";
+import { parse as parseMessageDefinition } from "@lichtblick/rosmsg";
 import { MessageReader } from "@lichtblick/rosmsg-serialization";
 import { EventEmitter } from "eventemitter3";
 

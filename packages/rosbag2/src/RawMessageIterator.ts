@@ -9,9 +9,9 @@ export type MessageRow = {
 };
 
 export class RawMessageIterator implements AsyncIterableIterator<RawMessage> {
-  // eslint-disable-next-line @foxglove/prefer-hash-private
+  // eslint-disable-next-line @lichtblick/prefer-hash-private
   private dbIterator: IterableIterator<MessageRow>;
-  // eslint-disable-next-line @foxglove/prefer-hash-private
+  // eslint-disable-next-line @lichtblick/prefer-hash-private
   private topicsMap: Map<bigint, TopicDefinition>;
 
   public constructor(

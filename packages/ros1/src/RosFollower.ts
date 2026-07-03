@@ -1,4 +1,4 @@
-import { HttpServer, HttpRequest, XmlRpcServer, XmlRpcValue } from "@foxglove/xmlrpc";
+import { HttpServer, HttpRequest, XmlRpcServer, XmlRpcValue } from "@lichtblick/xmlrpc";
 import { EventEmitter } from "eventemitter3";
 import ipaddr from "ipaddr.js";
 
@@ -48,7 +48,7 @@ export class RosFollower extends EventEmitter<RosFollowerEvents> {
 
   async start(hostname: string, port?: number): Promise<void> {
     await this._server.listen(port, undefined, 10);
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+
     this._url = `http://${hostname}:${this._server.port()}/`;
 
     this._server.setHandler("getBusStats", this.getBusStats);
