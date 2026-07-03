@@ -1,4 +1,4 @@
-/** @module @foxglove/rosbag */
+/** @module @lichtblick/rosbag */
 
 import Bag from "./Bag";
 

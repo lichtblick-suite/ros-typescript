@@ -1,6 +1,6 @@
-import type { MessageDefinition } from "@foxglove/message-definition";
-import { ros2galactic } from "@foxglove/rosmsg-msgs-common";
 import { foxgloveMessageSchemas, generateRosMsgDefinition } from "@foxglove/schemas/internal";
+import type { MessageDefinition } from "@lichtblick/message-definition";
+import { ros2galactic } from "@lichtblick/rosmsg-msgs-common";
 import { MessageReader, MessageReaderOptions } from "@lichtblick/rosmsg2-serialization";
 import { Time, isLessThan as isTimeLessThan } from "@lichtblick/rostime";
 

@@ -183,7 +183,6 @@ export class TcpClient extends EventEmitter<TcpClientEvents> implements Client {
 
     if (topic == undefined || dataType == undefined || destinationCallerId == undefined) {
       this._log?.warn?.(
-        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         `tcp client ${this.toString()} sent incomplete header. topic="${topic}", type="${dataType}", callerid="${destinationCallerId}"`,
       );
       this.close();

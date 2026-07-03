@@ -170,7 +170,7 @@ function generateDefinitions(
 ): string {
   let output = `${LICENSE}
 
-import { MessageDefinition } from "@foxglove/message-definition";
+import { MessageDefinition } from "@lichtblick/message-definition";
 `;
 
   for (const [groupName, definitions] of definitionsByGroup.entries()) {

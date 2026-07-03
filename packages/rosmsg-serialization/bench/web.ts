@@ -1,4 +1,4 @@
-import { parse } from "@foxglove/rosmsg";
+import { parse } from "@lichtblick/rosmsg";
 
 import { testCases } from "./testCases";
 import { LazyMessageReader, MessageReader, MessageWriter } from "../src";

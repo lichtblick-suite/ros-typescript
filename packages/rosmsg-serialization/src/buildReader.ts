@@ -1,4 +1,4 @@
-import { MessageDefinition, MessageDefinitionField } from "@foxglove/message-definition";
+import { MessageDefinition, MessageDefinitionField } from "@lichtblick/message-definition";
 
 import { createParsers, StandardTypeReader } from ".";
 import { deserializers, fixedSizeTypes, FixedSizeTypes } from "./BuiltinDeserialize";
@@ -310,7 +310,7 @@ export default function buildReader(
         #view = undefined;
         #offset;
         ${initializers.join("\n")}
-  
+
         constructor(view, offset = 0) {
           this.#view = view;
           this.#offset = offset;

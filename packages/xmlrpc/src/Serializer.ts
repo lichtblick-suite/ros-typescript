@@ -162,7 +162,7 @@ function getNextItemsFrame(frame: ValueInfo) {
   return nextFrame;
 }
 
-// eslint-disable-next-line @foxglove/no-boolean-parameters
+// eslint-disable-next-line @lichtblick/no-boolean-parameters
 function appendBoolean(value: boolean, xml: XMLBuilder) {
   xml.ele("boolean").txt(value ? "1" : "0");
 }

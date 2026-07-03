@@ -808,7 +808,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.33.0, @eslint/js@npm:^9":
+"@eslint/js@npm:9.33.0":
   version: 9.33.0
   resolution: "@eslint/js@npm:9.33.0"
   checksum: 10c0/4c42c9abde76a183b8e47205fd6c3116b058f82f07b6ad4de40de56cdb30a36e9ecd40efbea1b63a84d08c206aadbb0aa39a890197e1ad6455a8e542df98f186
@@ -832,36 +832,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxglove/cdr@npm:^3.5.1":
-  version: 3.5.1
-  resolution: "@foxglove/cdr@npm:3.5.1"
-  checksum: 10c0/eadd02f48551b360c040624eb7e9e501840937618e338c2e560a5b0676a7f08f419c3794ec90bbfac7a6675b411e2a4241e9aee4b1a9febafc1d446af892060b
-  languageName: node
-  linkType: hard
-
-"@foxglove/eslint-plugin@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@foxglove/eslint-plugin@npm:2.1.0"
-  dependencies:
-    "@eslint/compat": "npm:^1"
-    "@eslint/js": "npm:^9"
-    "@typescript-eslint/utils": "npm:^8"
-    eslint-config-prettier: "npm:^9"
-    eslint-plugin-es: "npm:^4"
-    eslint-plugin-filenames: "npm:^1"
-    eslint-plugin-import: "npm:^2"
-    eslint-plugin-jest: "npm:^28"
-    eslint-plugin-prettier: "npm:^5"
-    eslint-plugin-react: "npm:^7"
-    eslint-plugin-react-hooks: "npm:^5"
-    tsutils: "npm:^3"
-    typescript-eslint: "npm:^8"
-  peerDependencies:
-    eslint: ^9.27.0
-  checksum: 10c0/f6a8645947748b38081c199f6da64e07a59ff73ceec2a132801424c1f0328809f30c503ddea6334bb093eafb062f1335f8603ffd7a8e44ccf54246daebefeb24
-  languageName: node
-  linkType: hard
-
 "@foxglove/just-fetch@npm:^1.2.4":
   version: 1.3.1
   resolution: "@foxglove/just-fetch@npm:1.3.1"
@@ -871,34 +841,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxglove/message-definition@npm:0.5.0, @foxglove/message-definition@npm:^0.5.0":
+"@foxglove/message-definition@npm:0.5.0":
   version: 0.5.0
   resolution: "@foxglove/message-definition@npm:0.5.0"
   checksum: 10c0/a6562326e1b59a8f8d6ff3e60145d487e5136fb4e67fb588b7cbc4d1d7e969fd0f6d1eadcef97f52ecd9326c684e7bfdb465c7d3adc22896a7a84981a5a1a891
   languageName: node
   linkType: hard
 
-"@foxglove/omgidl-parser@npm:1.2.2":
-  version: 1.2.2
-  resolution: "@foxglove/omgidl-parser@npm:1.2.2"
-  dependencies:
-    tslib: "npm:^2"
-  checksum: 10c0/fb692c1d93267170c3fbcd3bd07001c35da72fe6f6c341de37f86e8c576b0cb5911a52f9d078e06bfa6430bec4bb3441a65bb93297dc245dff2daf4dded41a09
-  languageName: node
-  linkType: hard
-
-"@foxglove/ros2idl-parser@npm:^0.3.6":
-  version: 0.3.6
-  resolution: "@foxglove/ros2idl-parser@npm:0.3.6"
-  dependencies:
-    "@foxglove/message-definition": "npm:^0.5.0"
-    "@foxglove/omgidl-parser": "npm:1.2.2"
-    md5-typescript: "npm:^1.0.5"
-  checksum: 10c0/d3f10a56c8778582b08ba018364ff12596d6c3491c30404c84dde669c2dbe2ca008b2f0024195ed1121753619d05dedac9bba026afc4bd0819453666cfc8b691
-  languageName: node
-  linkType: hard
-
-"@foxglove/rosmsg-msgs-common@npm:^3.0.0":
+"@foxglove/rosmsg-msgs-common@npm:^3.2.2":
   version: 3.2.3
   resolution: "@foxglove/rosmsg-msgs-common@npm:3.2.3"
   dependencies:
@@ -918,13 +868,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxglove/schemas@npm:^1.7.2":
-  version: 1.7.2
-  resolution: "@foxglove/schemas@npm:1.7.2"
+"@foxglove/schemas@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@foxglove/schemas@npm:2.1.0"
   dependencies:
-    "@foxglove/rosmsg-msgs-common": "npm:^3.0.0"
+    "@foxglove/rosmsg-msgs-common": "npm:^3.2.2"
     tslib: "npm:^2"
-  checksum: 10c0/e52b8ade3010bd7b4e65f44ea76b2bea2819253c21d9ecf2d74c3e67264af87cfe0fe71ffe8235881d37fba596d36e711e655526515a32932cc2ee73bb10c8fe
+  checksum: 10c0/678aed7499b280daa2ca0150c90aead686d998547900a7fa0c4531d716c85c6b90c200b700a9e07a6ce97369d84b626935f9733be194e8d7a8d207802a57984e
   languageName: node
   linkType: hard
 
@@ -941,17 +891,6 @@ __metadata:
   checksum: 10c0/e9442ac639d46f1934b0f78b63d1fcf2aaeb08113f0ad51f7ed36328b6b092b970027cd6bdc3e9f763949d8c1b43fed066627f0e0e8b609b1fcf2adc6a995577
   languageName: node
   linkType: hard
-
-"@foxglove/xmlrpc@portal:../::locator=xmlrpc-examples%40workspace%3Apackages%2Fxmlrpc%2Fexamples":
-  version: 0.0.0-use.local
-  resolution: "@foxglove/xmlrpc@portal:../::locator=xmlrpc-examples%40workspace%3Apackages%2Fxmlrpc%2Fexamples"
-  dependencies:
-    "@foxglove/just-fetch": "npm:^1.2.4"
-    byte-base64: "npm:^1.1.0"
-    sax: "npm:^1.2.4"
-    xmlbuilder2: "npm:^4.0.3"
-  languageName: node
-  linkType: soft
 
 "@gerrit0/mini-shiki@npm:^3.9.0":
   version: 3.9.0
@@ -1644,10 +1583,51 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lichtblick/message-definition@npm:^1.0.0":
+"@lichtblick/cdr@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@lichtblick/cdr@npm:1.0.1"
+  checksum: 10c0/1622f88c6afacf35b7833ec4238480d4058ac50b071b421e90ed5673727e0b2c9ffcac4c10cf382d6dd2dca4d89b6cc1db7ab5ef663539408ef31a207b232d42
+  languageName: node
+  linkType: hard
+
+"@lichtblick/eslint-plugin@npm:^2.0.7":
+  version: 2.0.7
+  resolution: "@lichtblick/eslint-plugin@npm:2.0.7"
+  dependencies:
+    "@eslint/compat": "npm:^1"
+    eslint-config-prettier: "npm:^9"
+    eslint-plugin-es: "npm:^4"
+    eslint-plugin-filenames: "npm:^1"
+    eslint-plugin-import: "npm:^2"
+    eslint-plugin-jest: "npm:^28"
+    eslint-plugin-prettier: "npm:^5"
+    eslint-plugin-react: "npm:^7"
+    eslint-plugin-react-hooks: "npm:^5"
+    tsutils: "npm:^3"
+    typescript: "npm:^4 || ^5"
+    typescript-eslint: "npm:^8"
+  peerDependencies:
+    eslint: ^9.38.0
+    eslint-config-prettier: ^8 || ^9
+    prettier: ^3
+    typescript: ^4 || ^5
+  checksum: 10c0/053dfc1ec31bd429a9d9753dc3ae96e6fd1addf4b9d94067f7055d88841565133cbd43c6fb3ac4a238b3352d459de52f5335fc43adb885b6f0f6d01f5730d468
+  languageName: node
+  linkType: hard
+
+"@lichtblick/message-definition@npm:1.0.0, @lichtblick/message-definition@npm:^1.0.0":
   version: 1.0.0
   resolution: "@lichtblick/message-definition@npm:1.0.0"
   checksum: 10c0/dfa65765f29cad4ed18e3fc28b88db251df3d58921ad94aebe41282e961cfbd6916c776cee960af37e31b03054b17731a8f773d21f7bde33bcfacb4639b95c03
+  languageName: node
+  linkType: hard
+
+"@lichtblick/omgidl-parser@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@lichtblick/omgidl-parser@npm:1.0.0"
+  dependencies:
+    tslib: "npm:^2"
+  checksum: 10c0/7532404a4dcdc76ccc503bd6826229f0bd8993e74f25a815b3a61e70d971c4df324fc8ead81e1acdff435024c7af71aa2d1d1e742b66b82f77f69b7d81d702f2
   languageName: node
   linkType: hard
 
@@ -1655,7 +1635,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/ros1@workspace:packages/ros1"
   dependencies:
-    "@foxglove/message-definition": "npm:0.5.0"
+    "@lichtblick/message-definition": "npm:1.0.0"
     "@lichtblick/rosmsg": "workspace:^"
     "@lichtblick/rosmsg-serialization": "workspace:^"
     "@lichtblick/xmlrpc": "workspace:^"
@@ -1672,6 +1652,17 @@ __metadata:
     roscore: ./dist/nodejs/roscore.js
   languageName: unknown
   linkType: soft
+
+"@lichtblick/ros2idl-parser@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@lichtblick/ros2idl-parser@npm:1.0.0"
+  dependencies:
+    "@lichtblick/message-definition": "npm:^1.0.0"
+    "@lichtblick/omgidl-parser": "npm:1.0.0"
+    md5-typescript: "npm:^1.0.5"
+  checksum: 10c0/79bb6fe1e588ec2a7b1451d1ea1ff47903f1d118bbee367d34604bfb83854717757ec78789e30ab963b3f45936723417a938fb0f4f3f95811a548516dd8f459e
+  languageName: node
+  linkType: hard
 
 "@lichtblick/rosbag2-node@workspace:packages/rosbag2-node":
   version: 0.0.0-use.local
@@ -1712,7 +1703,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/rosbag2@workspace:packages/rosbag2"
   dependencies:
-    "@foxglove/schemas": "npm:^1.7.2"
+    "@foxglove/schemas": "npm:^2.1.0"
     "@lichtblick/rosmsg-msgs-common": "workspace:^"
     "@lichtblick/rosmsg2-serialization": "workspace:^"
     "@lichtblick/rostime": "workspace:^"
@@ -1755,7 +1746,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/rosmsg-msgs-common@workspace:packages/rosmsg-msgs-common"
   dependencies:
-    "@foxglove/message-definition": "npm:0.5.0"
     "@lichtblick/message-definition": "npm:^1.0.0"
     "@lichtblick/rosmsg": "workspace:^"
     "@types/node": "npm:^24.0.8"
@@ -1770,8 +1760,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/rosmsg-serialization@workspace:packages/rosmsg-serialization"
   dependencies:
-    "@foxglove/message-definition": "npm:0.5.0"
     "@foxglove/tsconfig": "npm:^3.1.0"
+    "@lichtblick/message-definition": "npm:1.0.0"
     "@lichtblick/rosmsg": "workspace:*"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^24.0.8"
@@ -1792,9 +1782,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/rosmsg2-serialization@workspace:packages/rosmsg2-serialization"
   dependencies:
-    "@foxglove/cdr": "npm:^3.5.1"
-    "@foxglove/message-definition": "npm:0.5.0"
-    "@foxglove/ros2idl-parser": "npm:^0.3.6"
+    "@lichtblick/cdr": "npm:^1.0.1"
+    "@lichtblick/message-definition": "npm:1.0.0"
+    "@lichtblick/ros2idl-parser": "npm:^1.0.0"
     "@lichtblick/rosmsg": "workspace:*"
     "@lichtblick/rostime": "workspace:^"
     "@sounisi5011/jest-binary-data-matchers": "npm:^1.2.1"
@@ -1810,7 +1800,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/rosmsg@workspace:packages/rosmsg"
   dependencies:
-    "@foxglove/message-definition": "npm:0.5.0"
+    "@lichtblick/message-definition": "npm:1.0.0"
     "@types/jest": "npm:^30.0.0"
     "@types/nearley": "npm:^2.11.5"
     jest: "npm:^30.0.3"
@@ -1837,6 +1827,17 @@ __metadata:
     ts-jest: "npm:^29.4.0"
     typescript: "npm:^5.8.3"
   languageName: unknown
+  linkType: soft
+
+"@lichtblick/xmlrpc@portal:../::locator=xmlrpc-examples%40workspace%3Apackages%2Fxmlrpc%2Fexamples":
+  version: 0.0.0-use.local
+  resolution: "@lichtblick/xmlrpc@portal:../::locator=xmlrpc-examples%40workspace%3Apackages%2Fxmlrpc%2Fexamples"
+  dependencies:
+    "@foxglove/just-fetch": "npm:^1.2.4"
+    byte-base64: "npm:^1.1.0"
+    sax: "npm:^1.2.4"
+    xmlbuilder2: "npm:^4.0.3"
+  languageName: node
   linkType: soft
 
 "@lichtblick/xmlrpc@workspace:^, @lichtblick/xmlrpc@workspace:packages/xmlrpc":
@@ -2473,7 +2474,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.38.0, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/utils@npm:^8":
+"@typescript-eslint/utils@npm:8.38.0, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0":
   version: 8.38.0
   resolution: "@typescript-eslint/utils@npm:8.38.0"
   dependencies:
@@ -8340,8 +8341,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@foxglove/eslint-plugin": "npm:^2.1.0"
     "@foxglove/tsconfig": "npm:^3.1.0"
+    "@lichtblick/eslint-plugin": "npm:^2.0.7"
     "@types/jest": "npm:^30.0.0"
     eslint: "npm:^9.31.0"
     eslint-plugin-file-progress: "npm:^3.0.2"
@@ -9408,6 +9409,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:^4 || ^5":
+  version: 5.9.3
+  resolution: "typescript@npm:5.9.3"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/6bd7552ce39f97e711db5aa048f6f9995b53f1c52f7d8667c1abdc1700c68a76a308f579cd309ce6b53646deb4e9a1be7c813a93baaf0a28ccd536a30270e1c5
+  languageName: node
+  linkType: hard
+
 "typescript@npm:^5.8.3":
   version: 5.8.3
   resolution: "typescript@npm:5.8.3"
@@ -9415,6 +9426,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/5f8bb01196e542e64d44db3d16ee0e4063ce4f3e3966df6005f2588e86d91c03e1fb131c2581baf0fb65ee79669eea6e161cd448178986587e9f6844446dbb48
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^4 || ^5#optional!builtin<compat/typescript>":
+  version: 5.9.3
+  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/ad09fdf7a756814dce65bc60c1657b40d44451346858eea230e10f2e95a289d9183b6e32e5c11e95acc0ccc214b4f36289dcad4bf1886b0adb84d711d336a430
   languageName: node
   linkType: hard
 
@@ -9955,7 +9976,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "xmlrpc-examples@workspace:packages/xmlrpc/examples"
   dependencies:
-    "@foxglove/xmlrpc": "portal:../"
+    "@lichtblick/xmlrpc": "portal:../"
     "@types/node": "npm:^24.0.8"
     ts-node: "npm:^10.9.2"
     tslib: "npm:^2.3.1"

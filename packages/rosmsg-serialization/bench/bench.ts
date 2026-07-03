@@ -1,4 +1,4 @@
-import { parse } from "@foxglove/rosmsg";
+import { parse } from "@lichtblick/rosmsg";
 import { printTable } from "console-table-printer";
 import { Benchmark, BenchmarkData, Measurement } from "kelonio";
 import percentile from "percentile";

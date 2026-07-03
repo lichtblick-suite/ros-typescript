@@ -1,7 +1,7 @@
 {
   "name": "@lichtblick/rosmsg-msgs-common",
   "version": "1.0.1",
-  "description": "Common ROS message definitions using @foxglove/rosmsg",
+  "description": "Common ROS message definitions using @lichtblick/rosmsg",
   "license": "MIT",
   "keywords": [
     "ros",
@@ -50,7 +50,6 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@foxglove/message-definition": "0.5.0",
     "@lichtblick/message-definition": "^1.0.0",
     "@lichtblick/rosmsg": "workspace:^"
   }

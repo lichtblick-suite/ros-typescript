@@ -1,4 +1,4 @@
-import { MessageDefinition } from "@foxglove/message-definition";
+import { MessageDefinition } from "@lichtblick/message-definition";
 import { MessageWriter } from "@lichtblick/rosmsg-serialization";
 
 import { Client } from "./Client";
@@ -26,7 +26,7 @@ export class Publication {
     name: string,
     md5sum: string,
     dataType: string,
-    // eslint-disable-next-line @foxglove/no-boolean-parameters
+    // eslint-disable-next-line @lichtblick/no-boolean-parameters
     latching: boolean,
     messageDefinition: MessageDefinition[],
     messageDefinitionText: string,
