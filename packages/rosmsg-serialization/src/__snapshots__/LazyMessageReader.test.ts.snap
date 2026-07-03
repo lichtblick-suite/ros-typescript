@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`LazyReader should deserialize CustomType custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first: CustomType custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first 1`] = `
+exports[`LazyReader should deserialize CustomType custom
+    ============
+    MSG: custom_type/CustomType
+    uint8 first: CustomType custom
+    ============
+    MSG: custom_type/CustomType
+    uint8 first 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -152,7 +158,19 @@ exports[`LazyReader should deserialize CustomType custom\\n    ============\\n  
 "
 `;
 
-exports[`LazyReader should deserialize CustomType[] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    MoreCustom another\\n    ============\\n    MSG: custom_type/MoreCustom\\n    uint8 field: CustomType[] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    MoreCustom another\\n    ============\\n    MSG: custom_type/MoreCustom\\n    uint8 field 1`] = `
+exports[`LazyReader should deserialize CustomType[] custom
+    ============
+    MSG: custom_type/CustomType
+    MoreCustom another
+    ============
+    MSG: custom_type/MoreCustom
+    uint8 field: CustomType[] custom
+    ============
+    MSG: custom_type/CustomType
+    MoreCustom another
+    ============
+    MSG: custom_type/MoreCustom
+    uint8 field 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -382,7 +400,13 @@ exports[`LazyReader should deserialize CustomType[] custom\\n    ============\\n
 "
 `;
 
-exports[`LazyReader should deserialize CustomType[] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first: CustomType[] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first 1`] = `
+exports[`LazyReader should deserialize CustomType[] custom
+    ============
+    MSG: custom_type/CustomType
+    uint8 first: CustomType[] custom
+    ============
+    MSG: custom_type/CustomType
+    uint8 first 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -540,7 +564,13 @@ exports[`LazyReader should deserialize CustomType[] custom\\n    ============\\n
 "
 `;
 
-exports[`LazyReader should deserialize CustomType[3] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first: CustomType[3] custom\\n    ============\\n    MSG: custom_type/CustomType\\n    uint8 first 1`] = `
+exports[`LazyReader should deserialize CustomType[3] custom
+    ============
+    MSG: custom_type/CustomType
+    uint8 first: CustomType[3] custom
+    ============
+    MSG: custom_type/CustomType
+    uint8 first 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -1197,7 +1227,9 @@ exports[`LazyReader should deserialize float32[] arr: float32[] arr 1`] = `
 "
 `;
 
-exports[`LazyReader should deserialize float32[] first\\nfloat32[] second: float32[] first\\nfloat32[] second 1`] = `
+exports[`LazyReader should deserialize float32[] first
+float32[] second: float32[] first
+float32[] second 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -1474,7 +1506,11 @@ exports[`LazyReader should deserialize float64 sample: float64 sample 1`] = `
 "
 `;
 
-exports[`LazyReader should deserialize int8 STATUS_ONE = 1\\n       int8 STATUS_TWO = 2\\n       int8 status: int8 STATUS_ONE = 1\\n       int8 STATUS_TWO = 2\\n       int8 status 1`] = `
+exports[`LazyReader should deserialize int8 STATUS_ONE = 1
+       int8 STATUS_TWO = 2
+       int8 status: int8 STATUS_ONE = 1
+       int8 STATUS_TWO = 2
+       int8 status 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -1554,7 +1590,9 @@ exports[`LazyReader should deserialize int8 STATUS_ONE = 1\\n       int8 STATUS_
 "
 `;
 
-exports[`LazyReader should deserialize int8 first\\nint8 second: int8 first\\nint8 second 1`] = `
+exports[`LazyReader should deserialize int8 first
+int8 second: int8 first
+int8 second 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -2550,7 +2588,9 @@ exports[`LazyReader should deserialize int64 sample # lowest: int64 sample # low
 "
 `;
 
-exports[`LazyReader should deserialize string first\\nint8 second: string first\\nint8 second 1`] = `
+exports[`LazyReader should deserialize string first
+int8 second: string first
+int8 second 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -3411,7 +3451,9 @@ exports[`LazyReader should deserialize time[1] arr: time[1] arr 1`] = `
 "
 `;
 
-exports[`LazyReader should deserialize uint8 blank\\nfloat32[] arr: uint8 blank\\nfloat32[] arr 1`] = `
+exports[`LazyReader should deserialize uint8 blank
+float32[] arr: uint8 blank
+float32[] arr 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -3521,7 +3563,9 @@ exports[`LazyReader should deserialize uint8 blank\\nfloat32[] arr: uint8 blank\
 "
 `;
 
-exports[`LazyReader should deserialize uint8 blank\\nfloat32[2] arr: uint8 blank\\nfloat32[2] arr 1`] = `
+exports[`LazyReader should deserialize uint8 blank
+float32[2] arr: uint8 blank
+float32[2] arr 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -3626,7 +3670,9 @@ exports[`LazyReader should deserialize uint8 blank\\nfloat32[2] arr: uint8 blank
 "
 `;
 
-exports[`LazyReader should deserialize uint8 blank\\nint32[] arr: uint8 blank\\nint32[] arr 1`] = `
+exports[`LazyReader should deserialize uint8 blank
+int32[] arr: uint8 blank
+int32[] arr 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
@@ -3736,7 +3782,9 @@ exports[`LazyReader should deserialize uint8 blank\\nint32[] arr: uint8 blank\\n
 "
 `;
 
-exports[`LazyReader should deserialize uint8 blank\\ntime[] arr: uint8 blank\\ntime[] arr 1`] = `
+exports[`LazyReader should deserialize uint8 blank
+time[] arr: uint8 blank
+time[] arr 1`] = `
 "function anonymous(
   deserializers,
   builtinSizes,
