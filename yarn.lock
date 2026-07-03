@@ -903,13 +903,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxglove/tsconfig@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@foxglove/tsconfig@npm:3.1.0"
-  checksum: 10c0/e9442ac639d46f1934b0f78b63d1fcf2aaeb08113f0ad51f7ed36328b6b092b970027cd6bdc3e9f763949d8c1b43fed066627f0e0e8b609b1fcf2adc6a995577
-  languageName: node
-  linkType: hard
-
 "@gerrit0/mini-shiki@npm:^3.9.0":
   version: 3.9.0
   resolution: "@gerrit0/mini-shiki@npm:3.9.0"
@@ -1739,10 +1732,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/rosbag@workspace:packages/rosbag"
   dependencies:
-    "@foxglove/tsconfig": "npm:^3.1.0"
     "@lichtblick/rosmsg": "workspace:^"
     "@lichtblick/rosmsg-serialization": "workspace:^"
     "@lichtblick/rostime": "workspace:^"
+    "@lichtblick/tsconfig": "npm:^1.1.2"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^24.0.8"
     compressjs: "npm:^1.0.3"
@@ -1778,9 +1771,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lichtblick/rosmsg-serialization@workspace:packages/rosmsg-serialization"
   dependencies:
-    "@foxglove/tsconfig": "npm:^3.1.0"
     "@lichtblick/message-definition": "npm:1.0.0"
     "@lichtblick/rosmsg": "workspace:*"
+    "@lichtblick/tsconfig": "npm:^1.1.2"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^24.0.8"
     benny: "npm:^3.7.1"
@@ -1846,6 +1839,13 @@ __metadata:
     typescript: "npm:6.0.3"
   languageName: unknown
   linkType: soft
+
+"@lichtblick/tsconfig@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@lichtblick/tsconfig@npm:1.1.2"
+  checksum: 10c0/9e3ea3efe569989a3d71b47820611724370ce4b8ba9547e8c46fde538a2ee514e5d807de93defbcccab4c8faa7bbf7c55e80e7d71dc0d2044a33251d4d260964
+  languageName: node
+  linkType: hard
 
 "@lichtblick/xmlrpc@portal:../::locator=xmlrpc-examples%40workspace%3Apackages%2Fxmlrpc%2Fexamples":
   version: 0.0.0-use.local
@@ -8557,8 +8557,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@foxglove/tsconfig": "npm:^3.1.0"
     "@lichtblick/eslint-plugin": "npm:^2.0.7"
+    "@lichtblick/tsconfig": "npm:^1.1.2"
     "@types/jest": "npm:^30.0.0"
     eslint: "npm:^9.31.0"
     eslint-plugin-file-progress: "npm:^3.0.2"

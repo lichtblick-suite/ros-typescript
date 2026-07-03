@@ -1,5 +1,5 @@
 {
-  "extends": "@foxglove/tsconfig/base.json",
+  "extends": "@lichtblick/tsconfig/base.json",
   "include": ["./src/**/*", "./typings/*.d.ts", "*.d.ts"],
   "exclude": ["./src/**/*.test.ts"],
   "compilerOptions": {
