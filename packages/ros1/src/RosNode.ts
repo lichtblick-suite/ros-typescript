@@ -381,10 +381,9 @@ export class RosNode extends EventEmitter<RosNodeEvents> {
       const key = keys[i]!;
       const entry = res[i];
       if (entry instanceof XmlRpcFault) {
-         
-        this._log?.warn?.(`subscribeAllParams faulted on "${key}" (${entry})`);
-         
-        this.emit("error", new Error(`subscribeAllParams faulted on "${key}" (${entry})`));
+        this._log?.warn?.(`subscribeAllParams faulted on "${key}" (${entry.message})`);
+
+        this.emit("error", new Error(`subscribeAllParams faulted on "${key}" (${entry.message})`));
         continue;
       }
       const [status, msg, value] = entry!;

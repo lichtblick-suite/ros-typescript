@@ -19,6 +19,7 @@ module.exports = tseslint.config(
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
+        projectService: false,
         project: ["packages/*/tsconfig.eslint.json"],
       },
     },
@@ -26,6 +27,13 @@ module.exports = tseslint.config(
   ...lichtblick.configs.typescript.map((config) => ({
     ...config,
     files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      ...config.languageOptions,
+      parserOptions: {
+        ...config.languageOptions?.parserOptions,
+        projectService: false,
+      },
+    },
   })),
   {
     files: ["**/*.ts", "**/*.tsx"],
@@ -61,6 +69,7 @@ module.exports = tseslint.config(
     files: ["packages/xmlrpc/examples/**"],
     languageOptions: {
       parserOptions: {
+        projectService: false,
         project: true,
       },
     },
@@ -78,6 +87,7 @@ module.exports = tseslint.config(
     files: ["packages/ros1/examples/**"],
     languageOptions: {
       parserOptions: {
+        projectService: false,
         project: true,
       },
     },
