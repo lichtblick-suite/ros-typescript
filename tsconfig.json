@@ -1,0 +1,32 @@
+{
+  // Solution-style root config: builds nothing itself ("files": []). It only lists
+  // every package project so the VS Code TS language server can route each file to a
+  // project. Each package's build tsconfig.json excludes *.test.ts, so tests would
+  // otherwise be orphaned (missing jest globals). Referencing each tsconfig.eslint.json
+  // — which includes tests and adds jest types — lets the editor resolve them correctly.
+  "files": [],
+  "references": [
+    { "path": "packages/ros1/tsconfig.json" },
+    { "path": "packages/ros1/tsconfig.eslint.json" },
+    { "path": "packages/rosbag/tsconfig.json" },
+    { "path": "packages/rosbag/tsconfig.eslint.json" },
+    { "path": "packages/rosbag2/tsconfig.json" },
+    { "path": "packages/rosbag2/tsconfig.eslint.json" },
+    { "path": "packages/rosbag2-node/tsconfig.json" },
+    { "path": "packages/rosbag2-node/tsconfig.eslint.json" },
+    { "path": "packages/rosbag2-web/tsconfig.json" },
+    { "path": "packages/rosbag2-web/tsconfig.eslint.json" },
+    { "path": "packages/rosmsg/tsconfig.json" },
+    { "path": "packages/rosmsg/tsconfig.eslint.json" },
+    { "path": "packages/rosmsg-msgs-common/tsconfig.json" },
+    { "path": "packages/rosmsg-msgs-common/tsconfig.eslint.json" },
+    { "path": "packages/rosmsg-serialization/tsconfig.json" },
+    { "path": "packages/rosmsg-serialization/tsconfig.eslint.json" },
+    { "path": "packages/rosmsg2-serialization/tsconfig.json" },
+    { "path": "packages/rosmsg2-serialization/tsconfig.eslint.json" },
+    { "path": "packages/rostime/tsconfig.json" },
+    { "path": "packages/rostime/tsconfig.eslint.json" },
+    { "path": "packages/xmlrpc/tsconfig.json" },
+    { "path": "packages/xmlrpc/tsconfig.eslint.json" }
+  ]
+}
