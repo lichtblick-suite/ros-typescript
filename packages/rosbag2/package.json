@@ -1,6 +1,6 @@
 {
   "name": "@lichtblick/rosbag2",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "ROS 2 bag reader and writer abstract implementation",
   "license": "MIT",
   "keywords": [
@@ -41,8 +41,8 @@
     "@types/js-yaml": "^4.0.9",
     "jest": "^30.0.3",
     "prettier": "^3.6.2",
-    "ts-jest": "^29.4.0",
-    "typescript": "^5.8.3"
+    "ts-jest": "^29.4.11",
+    "typescript": "6.0.3"
   },
   "dependencies": {
     "@foxglove/schemas": "^2.1.0",

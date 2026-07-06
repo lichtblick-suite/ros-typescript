@@ -1,6 +1,6 @@
 // -*- jsonc -*-
 {
-  "extends": "@foxglove/tsconfig/base.json",
+  "extends": "@lichtblick/tsconfig/base.json",
   "include": ["./src/**/*"],
   "exclude": ["./src/**/*.test.ts", "./src/fixtures/**/*"],
   "compilerOptions": {
@@ -10,6 +10,7 @@
     "verbatimModuleSyntax": false,
     "isolatedDeclarations": false,
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "ignoreDeprecations": "6.0"
   }
 }

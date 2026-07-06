@@ -1,13 +1,15 @@
 // -*- jsonc -*-
 // tsconfig for eslint
 {
-  "extends": "@foxglove/tsconfig/base.json",
+  "extends": "@lichtblick/tsconfig/base.json",
   "include": ["./src/**/*", "./bench/**/*"],
   "compilerOptions": {
     "lib": ["DOM", "es2020"],
     "verbatimModuleSyntax": false,
     "isolatedDeclarations": false,
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
+    "types": ["jest", "node"]
   }
 }

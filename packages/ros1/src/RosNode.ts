@@ -322,8 +322,8 @@ export class RosNode extends EventEmitter<RosNodeEvents> {
     this.parameters.set(key, adjustedValue);
 
     this._log?.debug?.(
-      // workaround for https://github.com/typescript-eslint/typescript-eslint/issues/10632
-      `subscribed ${callerApi} to param "${key}" (${String(adjustedValue as string)})`,
+      // eslint-disable-next-line @typescript-eslint/no-base-to-string
+      `subscribed ${callerApi} to param "${key}" (${String(adjustedValue)})`,
     );
     return adjustedValue;
   }
@@ -381,10 +381,9 @@ export class RosNode extends EventEmitter<RosNodeEvents> {
       const key = keys[i]!;
       const entry = res[i];
       if (entry instanceof XmlRpcFault) {
-        // eslint-disable-next-line @typescript-eslint/no-base-to-string, @typescript-eslint/restrict-template-expressions
-        this._log?.warn?.(`subscribeAllParams faulted on "${key}" (${entry})`);
-        // eslint-disable-next-line @typescript-eslint/no-base-to-string, @typescript-eslint/restrict-template-expressions
-        this.emit("error", new Error(`subscribeAllParams faulted on "${key}" (${entry})`));
+        this._log?.warn?.(`subscribeAllParams faulted on "${key}" (${entry.message})`);
+
+        this.emit("error", new Error(`subscribeAllParams faulted on "${key}" (${entry.message})`));
         continue;
       }
       const [status, msg, value] = entry!;

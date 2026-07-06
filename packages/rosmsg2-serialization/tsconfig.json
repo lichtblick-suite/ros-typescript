@@ -10,6 +10,7 @@
     "types": ["@sounisi5011/jest-binary-data-matchers"],
 
     "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
     "esModuleInterop": true,
     "isolatedModules": true,
     "allowJs": false,

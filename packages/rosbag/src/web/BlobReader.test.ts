@@ -12,6 +12,7 @@ import { TextEncoder, TextDecoder } from "util";
 import BlobReader from "./BlobReader";
 
 // github.com/jsdom/jsdom/issues/2524
+// @ts-expect-error ignore type mismatch with util TextEncoder and global one
 global.TextEncoder = TextEncoder;
 // @ts-expect-error ignore type miss-match with util TextDecode and global one
 global.TextDecoder = TextDecoder;
@@ -31,7 +32,7 @@ global.Blob.prototype.arrayBuffer = async function arrayBuffer(): Promise<ArrayB
         return;
       }
 
-      resolve(new Uint8Array(reader.result));
+      resolve(reader.result);
     };
     reader.onerror = function () {
       reader.onload = null;

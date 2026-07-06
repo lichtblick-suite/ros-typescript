@@ -39,7 +39,7 @@
     "prepack": "yarn build",
     "test:commonjs": "node -e \"require('./dist/index.js')\"",
     "test:esm": "test/testEsmImport.sh",
-    "test:types": "tsc --noEmit ./dist/index.d.ts",
+    "test:types": "tsc --noEmit --ignoreConfig ./dist/index.d.ts",
     "test": "yarn test:commonjs && yarn test:esm && yarn test:types"
   },
   "devDependencies": {
@@ -47,7 +47,7 @@
     "esbuild": "^0.25.4",
     "esbuild-runner": "^2.2.2",
     "prettier": "^3.6.2",
-    "typescript": "^5.8.3"
+    "typescript": "6.0.3"
   },
   "dependencies": {
     "@lichtblick/message-definition": "^1.0.0",

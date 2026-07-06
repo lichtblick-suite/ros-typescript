@@ -1,16 +1,19 @@
 {
-  "extends": "@foxglove/tsconfig/base.json",
+  "extends": "@lichtblick/tsconfig/base.json",
   "include": ["./src/**/*", "./typings/*.d.ts", "*.d.ts"],
+  "exclude": ["./src/**/*.test.ts"],
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist/esm",
     "lib": ["es2020", "dom"],
     "importHelpers": false,
     "typeRoots": ["./typings", "./node_modules/@types", "../../node_modules/@types"],
+    "types": ["node"],
     "verbatimModuleSyntax": false,
     "isolatedDeclarations": false,
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
     "resolveJsonModule": false
   }
 }

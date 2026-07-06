@@ -46,8 +46,8 @@
     "node": ">= 14"
   },
   "devDependencies": {
-    "@foxglove/tsconfig": "^3.1.0",
     "@lichtblick/rosmsg": "workspace:*",
+    "@lichtblick/tsconfig": "^1.1.2",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.8",
     "benny": "^3.7.1",
@@ -57,9 +57,9 @@
     "kelonio": "^0.11.0",
     "percentile": "^1.6.0",
     "prettier": "^3.6.2",
-    "ts-jest": "^29.4.0",
+    "ts-jest": "^29.4.11",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "6.0.3"
   },
   "dependencies": {
     "@lichtblick/message-definition": "1.0.0"

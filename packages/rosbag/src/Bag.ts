@@ -175,8 +175,8 @@ export default class Bag {
       }
       return new ReadResult<T>(
         topic,
-        // @ts-expect-error may be null if noParse is true
-        message,
+        // message may be null if noParse is true
+        message as T,
         timestamp,
         data,
         chunkOffset,

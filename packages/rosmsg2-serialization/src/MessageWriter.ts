@@ -111,7 +111,15 @@ export class MessageWriter {
    */
   public writeMessage(message: unknown, output?: Uint8Array): Uint8Array {
     const writer = new CdrWriter({
-      buffer: output,
+      // CdrWriter has no byteOffset option and always writes from the buffer origin, so
+      // slice the exact Uint8Array window to preserve subarray callers' allocated region.
+      buffer:
+        output != undefined
+          ? (output.buffer.slice(
+              output.byteOffset,
+              output.byteOffset + output.byteLength,
+            ) as ArrayBuffer)
+          : undefined,
       size: output ? undefined : this.calculateByteSize(message),
     });
     this.#write(this.#rootDefinition, message, writer);

@@ -46,8 +46,8 @@
     "jest": "^30.0.3",
     "jest-environment-jsdom": "^30.0.5",
     "prettier": "^3.6.2",
-    "ts-jest": "^29.4.0",
-    "typescript": "^5.8.3"
+    "ts-jest": "^29.4.11",
+    "typescript": "6.0.3"
   },
   "dependencies": {
     "@foxglove/sql.js": "^0.0.4",
