@@ -1736,7 +1736,7 @@ __metadata:
     "@lichtblick/rosbag2": "workspace:^"
     "@types/better-sqlite3": "npm:^7.6.12"
     "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.0.8"
+    "@types/node": "npm:^26.1.1"
     better-sqlite3: "npm:^13.0.1"
     jest: "npm:^30.0.3"
     prettier: "npm:^3.6.2"
@@ -1791,7 +1791,7 @@ __metadata:
     "@lichtblick/rostime": "workspace:^"
     "@lichtblick/tsconfig": "npm:^1.1.2"
     "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.0.8"
+    "@types/node": "npm:^26.1.1"
     compressjs: "npm:^1.0.3"
     cross-env: "npm:^10.0.0"
     heap: "npm:^0.2.7"
@@ -1813,7 +1813,7 @@ __metadata:
   dependencies:
     "@lichtblick/message-definition": "npm:^1.0.0"
     "@lichtblick/rosmsg": "workspace:^"
-    "@types/node": "npm:^24.0.8"
+    "@types/node": "npm:^26.1.1"
     esbuild: "npm:^0.25.4"
     esbuild-runner: "npm:^2.2.2"
     prettier: "npm:^3.6.2"
@@ -1829,7 +1829,7 @@ __metadata:
     "@lichtblick/rosmsg": "workspace:*"
     "@lichtblick/tsconfig": "npm:^1.1.2"
     "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.0.8"
+    "@types/node": "npm:^26.1.1"
     benny: "npm:^3.7.1"
     console-table-printer: "npm:^2.14.6"
     esbuild: "npm:^0.25.4"
@@ -1918,7 +1918,7 @@ __metadata:
   dependencies:
     "@foxglove/just-fetch": "npm:^1.2.4"
     "@types/jest": "npm:^30.0.0"
-    "@types/node": "npm:^24.0.8"
+    "@types/node": "npm:^26.1.1"
     "@types/sax": "npm:^1.2.3"
     byte-base64: "npm:^1.1.0"
     jest: "npm:^30.0.3"
@@ -2335,12 +2335,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^24.0.8":
+"@types/node@npm:*":
   version: 24.3.0
   resolution: "@types/node@npm:24.3.0"
   dependencies:
     undici-types: "npm:~7.10.0"
   checksum: 10c0/96bdeca01f690338957c2dcc92cb9f76c262c10398f8d91860865464412b0f9d309c24d9b03d0bdd26dd47fa7ee3f8227893d5c89bc2009d919a525a22512030
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^26.1.1":
+  version: 26.1.1
+  resolution: "@types/node@npm:26.1.1"
+  dependencies:
+    undici-types: "npm:~8.3.0"
+  checksum: 10c0/25ac5093195736dd074d5027adbba85617bc951d5a41506ebd3b9073048acb7233613f3822d5f9b9447f9c0841c91f6387c46283916767e3ef79f23917452c46
   languageName: node
   linkType: hard
 
@@ -8428,7 +8437,7 @@ __metadata:
   resolution: "ros1-chatter@workspace:packages/ros1/examples/ros1-chatter"
   dependencies:
     "@lichtblick/ros1": "workspace:^"
-    "@types/node": "npm:^24.0.8"
+    "@types/node": "npm:^26.1.1"
     ts-node: "npm:^10.7.0"
     tslib: "npm:^2.1.0"
     typescript: "npm:6.0.3"
@@ -8440,7 +8449,7 @@ __metadata:
   resolution: "ros1-turtlesim-test@workspace:packages/ros1/examples/ros1-turtlesim-test"
   dependencies:
     "@lichtblick/ros1": "workspace:^"
-    "@types/node": "npm:^24.0.8"
+    "@types/node": "npm:^26.1.1"
     ts-node: "npm:^10.7.0"
     tslib: "npm:^2.1.0"
     typescript: "npm:6.0.3"
@@ -9508,6 +9517,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~8.3.0":
+  version: 8.3.0
+  resolution: "undici-types@npm:8.3.0"
+  checksum: 10c0/c8aa7e2fbebfce519654dafadc0ece59be888d2ccaf180fb4495da875e7b536d2456345c384069c7e6f3e9c9ab7435f074957da306f142343eee86ff8048855a
+  languageName: node
+  linkType: hard
+
 "unique-filename@npm:^3.0.0":
   version: 3.0.0
   resolution: "unique-filename@npm:3.0.0"
@@ -10010,7 +10026,7 @@ __metadata:
   resolution: "xmlrpc-examples@workspace:packages/xmlrpc/examples"
   dependencies:
     "@lichtblick/xmlrpc": "portal:../"
-    "@types/node": "npm:^24.0.8"
+    "@types/node": "npm:^26.1.1"
     ts-node: "npm:^10.9.2"
     tslib: "npm:^2.3.1"
     typescript: "npm:6.0.3"
