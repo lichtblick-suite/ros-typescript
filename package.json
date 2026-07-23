@@ -15,7 +15,7 @@
     "@lichtblick/eslint-plugin": "^2.0.7",
     "@lichtblick/tsconfig": "^1.1.2",
     "@types/jest": "^30.0.0",
-    "eslint": "^9.31.0",
+    "eslint": "^10.7.0",
     "eslint-plugin-file-progress": "^4.0.0",
     "jest": "^30.0.3",
     "prettier": "^3.6.2",
