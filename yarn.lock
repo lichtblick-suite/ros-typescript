@@ -1785,7 +1785,7 @@ __metadata:
     "@types/jest": "npm:^30.0.0"
     "@types/js-yaml": "npm:^4.0.9"
     jest: "npm:^30.0.3"
-    js-yaml: "npm:^4.1.1"
+    js-yaml: "npm:^5.4.3"
     prettier: "npm:^3.6.2"
     ts-jest: "npm:^29.4.11"
     typescript: "npm:6.0.3"
@@ -6890,6 +6890,17 @@ __metadata:
   bin:
     js-yaml: bin/js-yaml.js
   checksum: 10c0/dedd34c2e8fef1d504687f1bc94ed0ee1311a1f78770fa2800352c6d59c635ccf555009d74e9afe529ae62199da2b1ccef30e53dc84dcd8d2d8187c22574bc97
+  languageName: node
+  linkType: hard
+
+"js-yaml@npm:^5.4.3":
+  version: 5.4.3
+  resolution: "js-yaml@npm:5.4.3"
+  dependencies:
+    argparse: "npm:^2.0.1"
+  bin:
+    js-yaml: bin/js-yaml.mjs
+  checksum: 10c0/7180bf35feef9815a06cb2f8845c1196f1e4264430a04623884d87c3d21475de7d46a86c9c5142dcc1646c788bc0e676eb09ba817810707e0b4e984f7cf93a5f
   languageName: node
   linkType: hard
 
